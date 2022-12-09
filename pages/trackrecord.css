@@ -2,14 +2,13 @@ span {
   display: block;
 }
 h4,
-h2,
 h3 {
   color: blue;
 }
 .cd {
   color: #60a13d;
 }
-a {
+li a {
   background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
   background-size: 200% 100%;
   background-position: -100%;
@@ -21,7 +20,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-a:before {
+li a:before {
   content: "";
   background: #54b3d6;
   display: block;
@@ -33,10 +32,10 @@ a:before {
   transition: all 0.3s ease-in-out;
 }
 
-a:hover {
+li a:hover {
   background-position: 0;
 }
 
-a:hover::before {
+li a:hover::before {
   width: 100%;
 }

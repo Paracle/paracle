@@ -39,3 +39,19 @@ li a:hover {
 li a:hover::before {
   width: 100%;
 }
+.moretext {
+  display: none;
+}
+.text.showmore .moretext {
+  display: inline;
+}
+.readmore-btn {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  font-weight: 400;
+}

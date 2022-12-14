@@ -1,6 +1,10 @@
-const readMoreBtn = document.querySelector(".readmore-btn");
-const text = document.querySelector(".text");
+const readMoreBtn = document.querySelectorAll(".readmore-btn");
 
-readMoreBtn.addEventListener("click", (e) => {
-  text.classList.toggle("showmore");
+readMoreBtn.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    const parentOfButton = element.parentNode;
+    const parentParagraph = parentOfButton.children;
+    console.log(parentParagraph);
+    parentParagraph[2].children[0].className = "showmore";
+  });
 });

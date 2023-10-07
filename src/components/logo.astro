@@ -1,0 +1,22 @@
+---
+import LogoTrans from "../components/images/logo.png";
+
+import LogoWhite from "../components/images/logo white.png";
+
+import { Image } from "astro:assets";
+
+interface Props {
+  logo: boolean;
+}
+
+const { logo = true } = Astro.props;
+---
+
+<div>
+  <Image
+    src={logo ? LogoWhite : LogoTrans}
+    width={70}
+    height={60}
+    alt="company logo"
+  />
+</div>

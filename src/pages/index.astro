@@ -1,0 +1,589 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/hero-section.astro";
+import { Image } from "astro:assets";
+import networking from "../components/images/networking.png";
+import adsImage from "../components/images/businessimg.jpg";
+import Target from "../components/icons/target.astro";
+import Bulb from "../components/icons/bulb.astro";
+import Footer from "../components/footer.astro";
+import alphajoe from "../components/images/alp.jpeg"
+import kingee from "../components/images/kingee.jpeg"
+import fresh from "../components/images/Frest Logo_page-0001.jpg"
+import dna from "../components/images/new1.jpeg"
+import nkv from "../components/images/new2.jpeg"
+import repro from "../components/images/repro.jpeg"
+import Anchu from "../components/images/rst1024_1.png"
+
+---
+
+<Layout title="homepage">
+  <main>
+    <section>
+      <HeroSection />
+    </section>
+
+    {/*Welcome text */}
+    <section class="wrapper">
+
+
+      {/*Services */}
+      <section class="service-section">
+        <div class="service-header">
+          <p>Our services</p>
+          <p>
+            Our management services focus on our client's most critical issues and opportunities: strategy, marketing, organization, operations, technology, transformation, research, digital, advanced analytics, mergers& acquisitions, and sustainability across all industries and geographies
+          </p>
+      </div>
+        <div class="service-card">
+          <div class="service-card__business">
+            <div>
+              <Target />
+            </div>
+            <div class="section-para">
+            <h4>BUSINESS DEVELOPMENT & MANAGEMENT</h4>
+           
+          </div>
+            <button>Read more↗</button>
+          </div>
+
+          <div class="service-card__business">
+            <div>
+              <Target />
+            </div>
+            <div class="section-para">
+            <h4>RESEARCH</h4>
+           
+          </div>
+            <button>Read more↗</button>
+          </div>
+
+          <div class="service-card__business">
+            <div>
+              <Target />
+            </div>
+            <div class="section-para">
+            <h4>NETWORKING</h4>
+          
+          </div>
+            <button style="margin-top:40px;">Read more↗</button>
+          </div>
+
+          <div class="service-card__business">
+            <div>
+              <Target />
+            </div>
+            <div class="section-para">
+            <h4>NGO CONSULTING</h4>
+           
+          </div>
+            <button style="margin-top:40px;">Read more↗</button>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+      {/** Ads*/}
+      <section class="ads">
+        <div class="adstitle">Explore</div>
+      <div class="ads-section">
+        <div class="ads-section__image">
+          <h3>Elevate Your Business with Expert Guidance</h3>
+          <p>We provide unmatched training and support; instilling capabilities and expertise across your teams, and throughout your company to ensure that your organization continues to reap sustainable benefits of long-term goal(s).</p>
+        </div>
+        <div class="ads-section__text">
+          <Image
+            src={adsImage}
+            width={600}
+            height={400}
+            alt="illustration of a man walking up a staircase with a victory flag at the end"
+          />
+        </div>
+      </div>
+    </section>
+
+
+    {/*Clients */}
+    <section class="client-section">
+      <div class="client-section__header"><p>Our clients</p></div>
+      <div class="client-section__logo">
+        <div>
+          <Image
+            src={alphajoe}
+            width={250}
+            height={200}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+        <div>
+          <Image
+            src={kingee}
+            width={120}
+            height={100}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+        <div>
+          <Image
+            src={repro}
+            width={150}
+            height={100}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+        <div>
+          <Image
+            src={dna}
+            width={180}
+            height={100}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+        <div>
+          <Image
+            src={nkv}
+            width={250}
+            height={100}
+            alt="illustration of a woman making a presentation to a man both seated"
+            quality={100}
+          />
+        </div>
+        <div>
+          <Image
+            src={fresh}
+            width={200}
+            height={200}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+        <div>
+          <Image
+            src={Anchu}
+            width={180}
+            height={150}
+            alt="illustration of a woman making a presentation to a man both seated"
+          />
+        </div>
+      </div>
+    </section>
+
+      {/*Testimonials */}
+      <section class="testimonial">
+        <div class="testimonial-title"><p>Testimonials</p></div>
+        <div class="testimonial-cards">
+        <div>
+          <p>
+           
+          Paracletworld Service Limited is a true partner in our growth journey. Their commitment to our success is evident in the results we've achieved together. Exceptional service!"
+          </p>
+          <p><cite> - Mr Denis Akunbiyi</cite></p>
+        </div>
+        <div>
+          <div>
+            <p>
+              "From financial management to strategic planning, Paracletworld Service Limited offers a comprehensive suite of services. They've become an invaluable asset to our organization."
+            </p>
+            <p><cite> - Mr Victor Ehenaro</cite></p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>
+              "Choosing Paracletworld Service Limited was one of the best decisions we made for our business. Their innovative solutions have given us a competitive edge in the market."
+            </p>
+            <p><cite> - Alphajoe Global Limited</cite></p>
+          </div>
+        </div>
+        
+
+
+        
+      </div>
+      </section>
+    </section>
+    
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+
+
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .wrapper {
+    margin: 150px auto;
+    width: 80vw;
+  }
+
+  .blow-text {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+  .blow-text p {
+    font-size: 56px;
+    font-weight: 800;
+    text-wrap: wrap;
+    text-align: center;
+    width: 50%;
+    color: #080875;
+  }
+
+  .service-section {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 150px;
+    gap:60px
+  }
+
+  .service-header {
+    width: 50%;
+    gap:40px;
+    display: flex;
+    flex-flow:column;
+    color:black;
+  }
+
+  .service-header p:nth-child(1) {
+    font-size: 48px;
+    color: black;
+    position: relative;
+  }
+
+.service-header p::after{
+  content: "";
+    background-color: rgba(5, 5, 236, 0.3);
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 48%;
+    height: 25%;
+    z-index: -1;
+}
+  
+
+  .service-card {
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    
+  }
+
+
+  .service-card__business:hover{
+    box-shadow: none;
+  }
+
+.service-card__business > div {
+  display: flex;
+  justify-content:center;
+
+}
+
+.section-para > h4{
+text-align: center;
+}
+
+.service-card__business .section-para{
+  display: flex;
+  flex-flow:column;
+  margin:10px;
+}
+
+
+.service-card__business {
+    padding: 20px;
+    display:flex;
+    flex-flow: column;
+    justify-content:space-between;
+    gap:20px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+ 
+   
+
+    & button{
+      border:none;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: 600;
+      color: orange;
+      cursor: pointer;
+    }
+
+  
+  }
+  
+  .ads{
+    margin-top: 150px;
+    display: flex;
+    flex-flow: row wrap;
+  } 
+
+  .adstitle{
+    font-size: 48px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .adstitle::after{
+    content: "";
+    background-color: rgba(5, 5, 236, 0.3);
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    z-index: -1;
+  }
+   
+
+  .ads-section {
+    display: flex;
+    width: 100%;
+   justify-content: space-between;
+    background: linear-gradient(#2424b5, #000052);
+    padding: 40px;
+    position: relative;
+    border-radius: 20px;
+  }
+
+
+  .ads-section__image {
+    width: 40%;
+    color:white;
+
+    & h3 {
+      font-size:40px;
+      margin-bottom: 40px;
+    }
+    
+  }
+
+  .ads-section__text {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+
+
+  .client-section {
+    display: flex;
+    flex-flow: column;
+    margin-top: 150px;
+ 
+  }
+
+  .client-section__logo {
+    display: flex;
+    flex-flow: row;
+    margin-top: 60px;
+    justify-content:start;
+    align-items: center;
+    overflow-x:scroll ;
+    gap:60px;
+  }
+
+  .client-section__header p {
+    font-size: 48px;
+    position: relative;
+  }
+
+  .client-section__header p::after {
+    content: "";
+    background-color: rgba(5, 5, 236, 0.3);
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width: 20%;
+    height: 25%;
+    z-index: -1;
+    
+  }
+
+
+  .testimonial{
+    margin-top: 150px;
+    display: flex;
+    flex-flow:column;
+   
+  }
+
+  .testimonial-title{
+    font-size:48px;
+    position: relative;
+  }
+
+  .testimonial-title::after{
+    content: "";
+    background-color: rgba(5, 5, 236, 0.3);
+    position: absolute;
+    top: 33px;
+    left: 0;
+    width: 23%;
+    height: 25%;
+    z-index: -1;
+  }
+
+  .testimonial-cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 60px;
+    gap:20px;
+
+  & div {
+    display: flex;
+    flex-flow: column;
+    gap:10px;
+    border-radius: 20px;
+
+    & p:nth-child(2){
+      font-weight:bold;
+      color: grey;
+    }
+  }
+   
+  }
+
+  .testimonial-cards > div{
+    border:1px solid #f4f4f4;
+    padding:20px;
+    position:relative;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .testimonial-cards > div::after {
+    content: "❝";
+    font-size: 40px;
+    position: absolute;
+    top:-25px;
+    background-color:white;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+   
+  }
+
+
+
+
+
+  {/*Media queries */}
+
+  @media screen and (max-width: 800px) {
+  .service-section {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 150px 24px;
+
+
+    & .service-card {
+      width: 100%;
+    }
+
+    & .service-header{
+      width: 100%;
+    }
+  }
+  
+
+  .client-section__logo {
+    display: flex;
+    flex-flow: row;
+    margin-top: 60px;
+    justify-content:center;
+    align-items: center;
+    gap:40px;
+    overflow-x: scroll;
+  }
+
+
+  .client-section{
+    margin: 150px 24px;
+  }
+
+  .service-header {
+    width: 100%;
+    gap:40px;
+    display: flex;
+    flex-flow:column;
+    color:black;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+   .ads-section{
+  
+    display: flex;
+    flex-flow: column wrap;
+    padding: 24px;
+    gap:40px;
+  } 
+
+  .ads-section__image {
+    width: 100%;
+  }
+
+  .ads-section__text {
+    width: 100%;
+  }
+
+  .adstitle{
+    margin: 0 24px 60px 24px;
+  }
+
+
+
+  .testimonial{
+    margin: 150px 24px;
+    display: flex;
+    flex-flow:column;
+   
+  }
+
+  .testimonial-cards{
+    gap:60px;
+  }
+
+
+    .wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  }
+
+
+
+
+
+  @keyframes translation {
+    0% {
+    transform: translateY(400px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  }
+</style>

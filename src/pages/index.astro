@@ -2,10 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/hero-section.astro";
 import { Image } from "astro:assets";
-import networking from "../components/images/networking.png";
 import adsImage from "../components/images/businessimg.jpg";
 import Target from "../components/icons/target.astro";
-import Bulb from "../components/icons/bulb.astro";
 import Footer from "../components/footer.astro";
 import alphajoe from "../components/images/alp.jpeg"
 import kingee from "../components/images/kingee.jpeg"
@@ -99,6 +97,7 @@ import Anchu from "../components/images/rst1024_1.png"
             width={600}
             height={400}
             alt="illustration of a man walking up a staircase with a victory flag at the end"
+            quality={100}
           />
         </div>
       </div>
@@ -336,7 +335,7 @@ text-align: center;
   .ads{
     margin-top: 150px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
   } 
 
   .adstitle{
@@ -351,7 +350,7 @@ text-align: center;
     position: absolute;
     top: 33px;
     left: 0;
-    width: 100%;
+    width: 14%;
     height: 25%;
     z-index: -1;
   }
@@ -376,7 +375,6 @@ text-align: center;
       font-size:40px;
       margin-bottom: 40px;
     }
-    
   }
 
   .ads-section__text {

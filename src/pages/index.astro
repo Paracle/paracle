@@ -12,6 +12,10 @@ import dna from "../components/images/new1.jpeg"
 import nkv from "../components/images/new2.jpeg"
 import repro from "../components/images/repro.jpeg"
 import Anchu from "../components/images/rst1024_1.png"
+import Search from "../components/icons/search.astro";
+import Consult from "../components/icons/consult.astro";
+import Connect from "../components/icons/connect.astro";
+import Briefcase from "../components/icons/briefcase.astro";
 
 ---
 
@@ -35,47 +39,52 @@ import Anchu from "../components/images/rst1024_1.png"
       </div>
         <div class="service-card">
           <div class="service-card__business">
-            <div>
-              <Target />
+            <div class="service-icon">
+              <Briefcase />
             </div>
             <div class="section-para">
             <h4>BUSINESS DEVELOPMENT & MANAGEMENT</h4>
-           
+            <p>Our management services focus on our client's most critical issues and opportunities</p>
+            <button>Read more</button>
           </div>
-            <button>Read more↗</button>
+           
           </div>
 
           <div class="service-card__business">
-            <div>
-              <Target />
+            <div class="service-icon">
+              <Search />
             </div>
             <div class="section-para">
             <h4>RESEARCH</h4>
-           
+            <p>Our approaches on every project are with the rigor and dedication needed to deliver</p>
+            <button>Read more</button>
           </div>
-            <button>Read more↗</button>
+         
           </div>
 
           <div class="service-card__business">
-            <div>
-              <Target />
+            <div class="service-icon">
+              <Connect />
             </div>
             <div class="section-para">
             <h4>NETWORKING</h4>
-          
+            <p>We work on several projects at different companies, single- and multi-client settings, often</p>
+            <button style="">Read more</button>
           </div>
-            <button style="margin-top:40px;">Read more↗</button>
+           
           </div>
 
           <div class="service-card__business">
-            <div>
-              <Target />
+            <div class="service-icon">
+              <Consult />
             </div>
             <div class="section-para">
             <h4>NGO CONSULTING</h4>
+            <p>We are committed to designing and implementing programs to create long-lasting, meaningful</p>
+            <button style="">Read more</button>
            
           </div>
-            <button style="margin-top:40px;">Read more↗</button>
+       
           </div>
         </div>
       </section>
@@ -245,13 +254,13 @@ import Anchu from "../components/images/rst1024_1.png"
 
   .service-section {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     margin-top: 150px;
     gap:60px
   }
 
   .service-header {
-    width: 50%;
+    width: 100%;
     gap:40px;
     display: flex;
     flex-flow:column;
@@ -264,58 +273,54 @@ import Anchu from "../components/images/rst1024_1.png"
     position: relative;
   }
 
-.service-header p::after{
-  content: "";
-    background-color: rgba(5, 5, 236, 0.3);
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 48%;
-    height: 25%;
-    z-index: -1;
-}
+
   
 
   .service-card {
     display: grid;
-    width: 50%;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
     
   }
 
 
   .service-card__business:hover{
-    box-shadow: none;
+    /* box-shadow: none; */
   }
 
 .service-card__business > div {
   display: flex;
-  justify-content:center;
+  justify-content:start;
 
 }
 
-.section-para > h4{
-text-align: center;
+.service-icon{
+  padding:30px;
+  border-radius:20px;
+  background-color:rgba(72,61,139, 0.2);
 }
+
 
 .service-card__business .section-para{
   display: flex;
   flex-flow:column;
-  margin:10px;
+  gap:20px;
+  justify-content: start;
+  text-align: left;
+
 }
 
 
 .service-card__business {
     padding: 20px;
     display:flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content:space-between;
     gap:20px;
     border-radius: 20px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     position: relative;
-    align-items: center;
     overflow: hidden;
  
    
@@ -327,6 +332,7 @@ text-align: center;
       font-weight: 600;
       color: orange;
       cursor: pointer;
+      text-align: left;
     }
 
   
@@ -344,23 +350,14 @@ text-align: center;
     position: relative;
   }
 
-  .explore-title::after{
-    content: "";
-    background-color: rgba(5, 5, 236, 0.3);
-    position: absolute;
-    top: 33px;
-    left: 0;
-    width: 14%;
-    height: 25%;
-    z-index: -1;
-  }
+
    
 
   .explore-section {
     display: flex;
     width: 100%;
    justify-content: space-between;
-    background: linear-gradient(#2424b5, #000052);
+    background: linear-gradient(#5852F2 , darkblue);
     padding: 40px;
     position: relative;
     border-radius: 20px;
@@ -407,17 +404,6 @@ text-align: center;
     position: relative;
   }
 
-  .client-section__header p::after {
-    content: "";
-    background-color: rgba(5, 5, 236, 0.3);
-    position: absolute;
-    top: 33px;
-    left: 0;
-    width: 20%;
-    height: 25%;
-    z-index: -1;
-    
-  }
 
 
   .testimonial{
@@ -432,16 +418,7 @@ text-align: center;
     position: relative;
   }
 
-  .testimonial-title::after{
-    content: "";
-    background-color: rgba(5, 5, 236, 0.3);
-    position: absolute;
-    top: 33px;
-    left: 0;
-    width: 23%;
-    height: 25%;
-    z-index: -1;
-  }
+
 
   .testimonial-cards{
     display:grid;
@@ -497,6 +474,8 @@ text-align: center;
 
     & .service-card {
       width: 100%;
+      height: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     & .service-header{
@@ -532,8 +511,26 @@ text-align: center;
     width: 100%;
   }
 
-   .explore-section{
+  .service-card__business {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    flex-flow: column;
+    
+   
+  }
+
+  .service-card__business > div {
+ 
+  justify-content:center;
+
+}
+
+
+
+
   
+   .explore-section{
     display: flex;
     flex-flow: column wrap;
     padding: 24px;

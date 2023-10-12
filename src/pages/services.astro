@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/navbar.astro";
 import ServiceImage from "../components/images/consulting 2.png";
 import { Image } from "astro:assets";
-import Research from "../components/images/research.png";
-import Networking from "../components/images/network.png";
+import Research from "../components/images/resh.jpeg";
+import Networking from "../components/images/netwk.jpeg";
 import Footer from "../components/footer.astro";
+import image1 from "../components/images/max1.jpeg";
+import image2 from "../components/images/max2.jpeg";
+import image3 from "../components/images/max3.jpeg";
 ---
 
 <Layout title="services">
@@ -56,12 +59,27 @@ import Footer from "../components/footer.astro";
               performance.
             </p>
           </div>
-          <div>
+          <div class="imagedrops">
             <Image
-              src={ServiceImage}
-              width={500}
+              src={image1}
+              width={300}
               height={300}
               alt="illustration"
+              style={{ objectFit: "cover" }}
+            />
+            <Image
+              src={image2}
+              width={300}
+              height={300}
+              alt="illustration"
+              style={{ objectFit: "cover" }}
+            />
+            <Image
+              src={image3}
+              width={300}
+              height={300}
+              alt="illustration"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
@@ -75,85 +93,91 @@ import Footer from "../components/footer.astro";
             <p>Business Development</p>
           </div>
           <div class="accordian-tab">
-            <details class="accordian">
-              <summary class="accordianTitle">Proposal Drafting</summary>
+            <div>
+              <details class="accordian">
+                <summary class="accordianTitle">Proposal Drafting</summary>
 
-               Paracletworld has an outstanding track record of experienced proposal
-              consultants' delivery for firms. We understand that one-size-fits-all
-              solutions are only myths, which is why we are intentionally flexible
-              - to fulfill any, and all your needs. We provide full-service business
-              proposal writing support to meet your needs and offers. Business proposal
-              writing help for a single RFP/RFI response or end-to-end proposal outsourcing
-              for all procurements.
-            </details>
+                 Paracletworld has an outstanding track record of experienced proposal
+                consultants' delivery for firms. We understand that one-size-fits-all
+                solutions are only myths, which is why we are intentionally flexible
+                - to fulfill any, and all your needs. We provide full-service business
+                proposal writing support to meet your needs and offers. Business
+                proposal writing help for a single RFP/RFI response or end-to-end
+                proposal outsourcing for all procurements.
+              </details>
 
-            <details class="accordian">
-              <summary class="accordianTitle">
-                Customer Satisfaction And Marketing
-              </summary>
+              <details class="accordian">
+                <summary class="accordianTitle">
+                  Customer Satisfaction And Marketing
+                </summary>
 
-               Our professional marketing staff will take your business from sales
-              plateaus by pivoting your business to new or additional audiences.
-              We deliver insight and impact quicker than ever. Our solutions leverage
-              advanced technology, and proprietary data with deep expertise to help
-              clients in new, exciting ways of reaching out and getting the right
-              audiences leveraging on customer satisfaction strategy.
-            </details>
+                 Our professional marketing staff will take your business from sales
+                plateaus by pivoting your business to new or additional audiences.
+                We deliver insight and impact quicker than ever. Our solutions leverage
+                advanced technology, and proprietary data with deep expertise to
+                help clients in new, exciting ways of reaching out and getting the
+                right audiences leveraging on customer satisfaction strategy.
+              </details>
 
-            <details class="accordian">
-              <summary class="accordianTitle">Training and Development</summary>
+              <details class="accordian">
+                <summary class="accordianTitle"
+                  >Training and Development</summary
+                >
 
-               We provide bespoke, pragmatic, and tailor-made training workshops
-              for both individuals and organizations(private and public sectors),
-              towards the enhancement of capabilities, and provision of up-to-date
-              information on job functions and responsibilities to enhance productivity.
-              We understand that every service, business, or function is different
-              and so are its needs with challenges. Hence we deploy a systematic
-              approach with a detailed understanding of the need of clients; and
-              proffer customized training to meet and exceed the needs. We offer
-              onsite, in-House, online, and classroom styled training services.
-            </details>
+                 We provide bespoke, pragmatic, and tailor-made training workshops
+                for both individuals and organizations(private and public sectors),
+                towards the enhancement of capabilities, and provision of up-to-date
+                information on job functions and responsibilities to enhance productivity.
+                We understand that every service, business, or function is different
+                and so are its needs with challenges. Hence we deploy a systematic
+                approach with a detailed understanding of the need of clients; and
+                proffer customized training to meet and exceed the needs. We offer
+                onsite, in-House, online, and classroom styled training services.
+              </details>
+            </div>
 
-            <details class="accordian">
-              <summary class="accordianTitle">Operations</summary>
+            <div>
+              <details class="accordian">
+                <summary class="accordianTitle">Operations</summary>
 
-               At Paracletworld, we work with companies like yours to craft business
-              profiles and excavate true business purposes. We unleash the power
-              of organizational purpose to transform productivity and profitability
-              for clients. We also help to fully activate and embed that purpose
-              throughout your organization. We provide support for business formation
-              and regulation., and develop policies to guide organizations and management
-              on best practices.
-            </details>
+                 At Paracletworld, we work with companies like yours to craft business
+                profiles and excavate true business purposes. We unleash the power
+                of organizational purpose to transform productivity and profitability
+                for clients. We also help to fully activate and embed that purpose
+                throughout your organization. We provide support for business formation
+                and regulation., and develop policies to guide organizations and
+                management on best practices.
+              </details>
 
-            <details class="accordian">
-              <summary class="accordianTitle"
-                >Sourcing Procurement and Branding</summary
-              >
+              <details class="accordian">
+                <summary class="accordianTitle">
+                  Sourcing Procurement and Branding
+                </summary>
 
-               We have a team of well-seasoned professionals with both national and
-              international work experience, with a track record of achievements
-              in procurements and a commitment to deliver. We work closely with your
-              team to identify and realize savings across all spending categories,
-              procurement levers and packaging development. We build your organizational
-              capabilities to enable you to sustain those gains over the long term.
-            </details>
+                 We have a team of well-seasoned professionals with both national
+                and international work experience, with a track record of achievements
+                in procurements and a commitment to deliver. We work closely with
+                your team to identify and realize savings across all spending categories,
+                procurement levers and packaging development. We build your organizational
+                capabilities to enable you to sustain those gains over the long term.
+              </details>
 
-            <details class="accordian">
-              <summary class="accordianTitle"
-                >Human Resource Outsourcing</summary
-              >
+              <details class="accordian">
+                <summary class="accordianTitle"
+                  >Human Resource Outsourcing</summary
+                >
 
-               Human Resource Outsourcing is a powerful tool that can help you grow
-              your business. Outsourcing even a portion of your company's Human resource
-              duties can result in considerable cost reduction and add hours of productive
-              time to your week. We engage the hearts and minds of people and teams
-              to deliver superior performance for our clients for the success of
-              the company. These candidates are selected using our stringent methodologies,
-              from headhunting executive to bulk recruitment and this ensures that
-              only the most suitable candidates are found, attracted, assessed, and
-              selected by our client.
-            </details>
+                 Human Resource Outsourcing is a powerful tool that can help you
+                grow your business. Outsourcing even a portion of your company's
+                Human resource duties can result in considerable cost reduction and
+                add hours of productive time to your week. We engage the hearts and
+                minds of people and teams to deliver superior performance for our
+                clients for the success of the company. These candidates are selected
+                using our stringent methodologies, from headhunting executive to
+                bulk recruitment and this ensures that only the most suitable candidates
+                are found, attracted, assessed, and selected by our client.
+              </details>
+            </div>
           </div>
         </div>
 
@@ -196,7 +220,13 @@ import Footer from "../components/footer.astro";
             </p>
           </div>
           <div class="research-img">
-            <Image src={Research} width={500} height={300} alt="illustration" />
+            <Image
+              src={Research}
+              width={500}
+              height={300}
+              alt="illustration"
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
 
@@ -204,9 +234,10 @@ import Footer from "../components/footer.astro";
           <div class="research-img">
             <Image
               src={Networking}
-              width={450}
+              width={500}
               height={300}
               alt="illustration"
+              style={{ objectFit: "cover" }}
             />
           </div>
           <div>
@@ -260,21 +291,47 @@ import Footer from "../components/footer.astro";
 
       & div:nth-child(2) {
         display: flex;
+        flex-flow: column;
         justify-content: end;
+        position: relative;
+
+        & img {
+          border-radius: 20px;
+          position: absolute;
+        }
+
+        & img:nth-child(1) {
+          top: 0;
+          left: 100px;
+          outline: 10px solid white;
+        }
+
+        & img:nth-child(2) {
+          top: 240px;
+          left: 200px;
+          outline: 10px solid white;
+        }
+
+        & img:nth-child(3) {
+          bottom: 0;
+          left: 100px;
+          outline: 10px solid white;
+        }
       }
     }
 
     .businessdev {
       display: flex;
+      flex-flow: column;
       justify-content: space-between;
       margin-top: 150px;
     }
 
     .biztab {
-      width: 50%;
+      width: 100%;
       & p {
         font-size: 48px;
-        width: 50%;
+        width: 100%;
         margin-top: 0;
       }
     }
@@ -301,7 +358,14 @@ import Footer from "../components/footer.astro";
     }
 
     .accordian-tab {
-      width: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+
+      & div {
+        width: 50%;
+      }
     }
 
     .accordian {
@@ -333,7 +397,7 @@ import Footer from "../components/footer.astro";
     }
 
     details summary {
-      padding-left: 40px;
+      padding-left: 30px;
       position: relative;
       cursor: pointer;
       user-select: none;
@@ -401,7 +465,7 @@ import Footer from "../components/footer.astro";
     .ngo::before {
       content: "";
       position: absolute;
-      background: linear-gradient(90deg, rgba(0, 0, 82, 0.7), rgba(0, 0, 82));
+      background: linear-gradient(darkblue, darkblue);
       width: 100%;
       height: 100%;
       border-radius: 20px;
@@ -414,6 +478,10 @@ import Footer from "../components/footer.astro";
       display: flex;
       margin-top: 150px;
       gap: 60px;
+
+      & img {
+        border-radius: 20px;
+      }
 
       & div:nth-child(1) {
         width: 50%;
@@ -440,6 +508,12 @@ import Footer from "../components/footer.astro";
       display: flex;
       margin-top: 150px;
       gap: 60px;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        border-radius: 20px;
+      }
 
       & div:nth-child(1) {
         width: 50%;
@@ -492,6 +566,26 @@ import Footer from "../components/footer.astro";
           display: flex;
           overflow: hidden;
           justify-content: end;
+          position: static;
+
+          & img {
+            border-radius: 20px;
+            position: static;
+          }
+
+          & img:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            outline: 10px solid white;
+          }
+
+          & img:nth-child(2) {
+            display: none;
+          }
+
+          & img:nth-child(3) {
+            display: none;
+          }
         }
       }
 
@@ -513,6 +607,21 @@ import Footer from "../components/footer.astro";
 
       .accordian-tab {
         width: 100%;
+        display: flex;
+        flex-flow: column;
+        gap: 0;
+
+        & div {
+          width: 100%;
+        }
+      }
+
+      details summary {
+        font-size: 14px;
+      }
+
+      .accordianTitle {
+        font-size: 14px;
       }
 
       .research {
@@ -530,6 +639,10 @@ import Footer from "../components/footer.astro";
           display: flex;
           overflow: hidden;
           justify-content: end;
+          & img {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
 
@@ -544,6 +657,11 @@ import Footer from "../components/footer.astro";
           display: flex;
           overflow: hidden;
           order: 2;
+
+          & img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         & div:nth-child(2) {

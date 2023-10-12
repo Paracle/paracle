@@ -4,8 +4,9 @@ import Layout from "../layouts/Layout.astro";
 import Target from "../components/icons/target.astro";
 import BulbIcon from "../components/icons/bulb.astro";
 import { Image } from "astro:assets";
-import Business from "../components/images/consulting.png";
+import Business from "../components/images/about pics.jpg";
 import Footer from "../components/footer.astro";
+import Ranking from "../components/icons/ranking.astro";
 ---
 
 <Layout title="about page">
@@ -16,10 +17,9 @@ import Footer from "../components/footer.astro";
 
     {/*hero section */}
     <div>
-    <section class="about-header">
-
-      <p>About us</p>
-    </section>
+      <section class="about-header">
+        <p>About us</p>
+      </section>
     </div>
 
     {/*Who we're */}
@@ -49,9 +49,10 @@ import Footer from "../components/footer.astro";
         <div class="whoweare-pics">
           <Image
             src={Business}
-            width={400}
+            width={500}
             height={400}
-            alt="who wwe are picture"
+            alt="who we are picture"
+            style={{ borderRadius: 20 }}
           />
         </div>
       </section>
@@ -89,7 +90,7 @@ import Footer from "../components/footer.astro";
         {/*our our purpose */}
         <section class="purpose">
           <div class="icon">
-            <BulbIcon />
+            <Ranking />
           </div>
           <div>
             <p>Our Purpose</p>
@@ -165,6 +166,7 @@ import Footer from "../components/footer.astro";
   .whoweare {
     margin-top: 150px;
     display: flex;
+    align-items: center;
 
     & div {
       width: 50%;
@@ -186,6 +188,26 @@ import Footer from "../components/footer.astro";
     width: 50%;
     display: flex;
     justify-content: end;
+    position: relative;
+    z-index: 1;
+
+    & img {
+      border-radius: 20px;
+    }
+  }
+
+  .whoweare-pics::after {
+    background: repeating-linear-gradient(45deg, bisque 0 1%, transparent 0 3%)
+      0 0 / 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    border-radius: 20px;
+    width: 80%;
+    height: 95%;
+    content: "";
+    z-index: -1;
   }
 
   .icon {
@@ -291,7 +313,17 @@ import Footer from "../components/footer.astro";
 
     .whoweare-pics {
       width: 100%;
+      display: flex;
       overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        margin-top: 40px;
+      }
+    }
+    .whoweare-pics::after {
+      top: 20px;
     }
 
     .innovations {
@@ -311,11 +343,12 @@ import Footer from "../components/footer.astro";
     }
 
     .about-header {
-    width: 100%;
-    margin: 0 auto;
+      width: 100%;
+      margin: 0 auto;
 
-    & div {
+      & div {
         margin: 0 24px;
+      }
     }
   }
 </style>

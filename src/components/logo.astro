@@ -5,6 +5,10 @@ import LogoWhite from "../components/icons/logoWhite.astro";
 
 import { Image } from "astro:assets";
 
+import LogosT from "../components/images/L.png";
+
+import LogosW from "../components/images/LW.png";
+
 interface Props {
   logo: boolean;
 }
@@ -13,5 +17,11 @@ const { logo = true } = Astro.props;
 ---
 
 <div>
-  {logo ? <LogoWhite /> : <LogoTrans />}
+  {
+    logo ? (
+      <Image src={LogosT} width={80} height={70} alt="logo" />
+    ) : (
+      <Image src={LogosW} width={80} height={70} alt="logo" />
+    )
+  }
 </div>

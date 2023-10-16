@@ -17,14 +17,16 @@ import Navbar from "./navbar.astro";
 
       <div class="hero-text">
         <div class="headings">
-          <h1>World Class Excellence in <b style="">Consultancy</b></h1>
+          <h1>
+            World Class Excellence in <b style="">Consultancy</b>
+          </h1>
           <p>
             We make the greatest impact through collaboration with our clients,
             as our diverse, global teams help organizations tackle the most
             urgent dynamic challenges
           </p>
           <button
-            ><a href="/services" style="color:white; text-decoration: none;"
+            ><a href="/services" style=" text-decoration: none;"
               >Checkout our services</a
             ></button
           >
@@ -39,11 +41,11 @@ import Navbar from "./navbar.astro";
 
 <style>
   main {
-    background-image: url("../components/images/hero.jpg");
+    background-image: url("../components/images/biz.jpeg");
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 
@@ -51,10 +53,10 @@ import Navbar from "./navbar.astro";
     content: "";
     width: 100%;
     height: 100%;
-    background-color: darkblue;
+    background: linear-gradient(90deg, grey 0%, black 60%);
     position: absolute;
     top: 0;
-    opacity: 0.9;
+    opacity: 1;
     mix-blend-mode: multiply;
   }
 
@@ -71,8 +73,8 @@ import Navbar from "./navbar.astro";
     z-index: 10;
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
-    padding-bottom: 60px;
+    margin-top: 20px;
+    padding-bottom: 0px;
     color: white;
     position: relative;
 
@@ -82,9 +84,13 @@ import Navbar from "./navbar.astro";
       font-size: 16px;
       font-weight: 800;
       background-color: orange;
-      color: white;
+
       border-radius: 20px;
       width: 40%;
+    }
+
+    & button a {
+      color: black !important;
     }
 
     & p {
@@ -168,14 +174,14 @@ import Navbar from "./navbar.astro";
       gap: 30px;
     }
 
-    main::before {
+    /* main::before {
       content: "";
       background-color: rgba(0, 0, 82);
       position: absolute;
       top: 0;
       opacity: 0.9;
       mix-blend-mode: multiply;
-    }
+    } */
 
     .world-map {
       width: auto;

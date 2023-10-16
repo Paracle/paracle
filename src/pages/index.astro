@@ -16,6 +16,7 @@ import Search from "../components/icons/search.astro";
 import Consult from "../components/icons/consult.astro";
 import Connect from "../components/icons/connect.astro";
 import Briefcase from "../components/icons/briefcase.astro";
+import Bulb from "../components/icons/bulb.astro";
 
 ---
 
@@ -25,81 +26,99 @@ import Briefcase from "../components/icons/briefcase.astro";
       <HeroSection />
     </section>
 
+    <section class="cards">
+      <div class="cards-grid">
+      <div class="card-business">
+        <div class="service-icon">
+          <Briefcase />
+        </div>
+        <div class="section-para">
+          <h4>SOURCING PROCUREMENT AND BRANDING</h4>
+         
+          <!-- <button><a href="services.html#business" style="color:orange; text-decoration: none;">Read more</a></button> -->
+        </div>
+      </div>
+      
+
+      <div class="card-business">
+        <div class="service-icon">
+          <Briefcase />
+        </div>
+        <div class="section-para">
+          <h4>TRAINING & DEVELOPMENT</h4>
+         
+         
+        </div>
+      </div>
+    
+
+      <div class="card-business">
+        <div class="service-icon">
+          <Briefcase />
+        </div>
+        <div class="section-para">
+          <h4>HUMAN RESOURCE OUTSOURCING</h4>
+         
+         
+        </div>
+      </div>
+     
+      
+      <div class="card-business">
+        <div class="service-icon">
+          <Briefcase />
+        </div>
+        <div class="section-para">
+          <h4>PROPOSAL DRAFTING</h4>
+         
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="card-text">
+    <div>
+      <p>Where Ideas Meet Strategy</p>
+      <p>Unlocking Growth Strategies for Business Excellence</p>
+      <button><a href="/contact">Get in touch</a></button>
+    </div>
+    </div>
+    </section>
+
     {/*Welcome text */}
     <section class="wrapper">
-
-
-      {/*Services */}
-      <section class="service-section">
-        <div class="service-header">
-          <p>Our services</p>
-          <p>
-            Our management services focus on our client's most critical issues and opportunities: strategy, marketing, organization, operations, technology, transformation, research, digital, advanced analytics, mergers& acquisitions, and sustainability across all industries and geographies
-          </p>
-      </div>
-        <div class="service-card">
-          <div class="service-card__business">
-            <div class="service-icon">
-              <Briefcase />
-            </div>
-            <div class="section-para">
-            <h4>BUSINESS DEVELOPMENT & MANAGEMENT</h4>
-            <p>Our management services focus on our client's most critical issues and opportunities</p>
-            <button><a href="services.html#business" style="color:orange; text-decoration: none;">Read more</a></button>
-          </div>
-           
-          </div>
-
-          <div class="service-card__business">
-            <div class="service-icon">
-              <Search />
-            </div>
-            <div class="section-para">
-            <h4>RESEARCH</h4>
-            <p>Our approaches on every project are with the rigor and dedication needed to deliver</p>
-            <button><a href="services.html#research" style="color:orange; text-decoration: none;">Read more</a></button>
-          </div>
-         
-          </div>
-
-          <div class="service-card__business">
-            <div class="service-icon">
-              <Connect />
-            </div>
-            <div class="section-para">
-            <h4>NETWORKING</h4>
-            <p>We work on several projects at different companies, single- and multi-client settings, often</p>
-            <button style=""><a href="services.html#networking" style="color:orange; text-decoration: none;">Read more</a>
-            </button>
-          </div>
-           
-          </div>
-
-          <div class="service-card__business">
-            <div class="service-icon">
-              <Consult />
-            </div>
-            <div class="section-para">
-            <h4>NGO CONSULTING</h4>
-            <p>We are committed to designing and implementing programs to create long-lasting, meaningful</p>
-            <button style=""><a href="services.html#ngo" style="color:orange; text-decoration: none;">Read more</a></button>
-           
-          </div>
-       
-          </div>
-        </div>
-      </section>
-
-
       
 
       {/** Ads*/}
       <section class="explore">
-        <div class="explore-title">Explore</div>
+        <div class="explore-title">
+          <p>About us</p>
+      
+        </div>
       <div class="explore-section">
         <div class="explore-section__image">
           <h3>Elevate Your Business with Expert Guidance</h3>
-          <p>We provide unmatched training and support; instilling capabilities and expertise across your teams, and throughout your company to ensure that your organization continues to reap sustainable benefits of long-term goal(s).</p>
+          <div class="explore-vision__section">
+
+            <div class="explore-vision">
+              <div class="explore-icon"><Target/></div>
+              <div>
+                <p>Our Mission</p>
+                <p>
+                  To support businesses and organizations of varying size, structure, and maturity across diverse sectors,  to enhance business and organization's performance; optimization of growth to achieve exceptional results.
+                </p>
+                </div>
+            </div>
+
+
+            <div class="explore-vision">
+                <div class="explore-icon"><Bulb/></div>
+                <div>
+                  <p>Our Vision</p>
+                 <p>To work with ambitious leaders of companies and organizations from around the globe who want to define the future; leveraging our experience and expertise in mobilizing for change, navigating uncertainty, to enable them to achieve sustained and profitable growth.</p> 
+                </div>
+            </div>
+          </div>
         </div>
         <div class="explore-section__text">
           <Image
@@ -113,10 +132,83 @@ import Briefcase from "../components/icons/briefcase.astro";
       </div>
     </section>
 
+      {/*Services */}
+      <section class="service-section">
+        <div class="service-section-margin">
+        <div class="service-header">
+          <p>Our services</p>
+          <p>Innovative Solutions, Unparalleled Services</p>
+          <p>
+            Our management services focus on our client's most critical issues and opportunities: strategy, marketing, organization, operations, technology, transformation, research, digital, advanced analytics, mergers& acquisitions, and sustainability across all industries and geographies
+          </p>
+      </div>
+        <div class="service-card">
+          <div class="service-card__business">
+            <div class="service-icon__service">
+              <Briefcase />
+            </div>
+            <div class="section-para">
+            <h4>BUSINESS DEVELOPMENT & MANAGEMENT</h4>
+            <p>Our management services focus on our client's most critical issues and opportunities</p>
+            <button><a href="services.html#business" style="color:orange; text-decoration: none;">Read more</a></button>
+          </div>
+           
+          </div>
+
+          <div class="service-card__business">
+            <div class="service-icon__service">
+              <Search />
+            </div>
+            <div class="section-para">
+            <h4>RESEARCH</h4>
+            <p>Our approaches on every project are with the rigor and dedication needed to deliver</p>
+            <button><a href="services.html#research" style="color:orange; text-decoration: none;">Read more</a></button>
+          </div>
+         
+          </div>
+
+          <div class="service-card__business">
+            <div class="service-icon__service">
+              <Connect />
+            </div>
+            <div class="section-para">
+            <h4>NETWORKING</h4>
+            <p>We work on several projects at different companies, single- and multi-client settings, often</p>
+            <button style=""><a href="services.html#networking" style="color:orange; text-decoration: none;">Read more</a>
+            </button>
+          </div>
+           
+          </div>
+
+          <div class="service-card__business">
+            <div class="service-icon__service">
+              <Consult />
+            </div>
+            <div class="section-para">
+            <h4>NGO CONSULTING</h4>
+            <p>We are committed to designing and implementing programs to create long-lasting, meaningful</p>
+            <button style=""><a href="services.html#ngo" style="color:orange; text-decoration: none;">Read more</a></button>
+           
+          </div>
+       
+          </div>
+        </div>
+      </div>
+      </section>
+
+
+      
+
+      
+
 
     {/*Clients */}
     <section class="client-section">
-      <div class="client-section__header"><p>Our clients</p></div>
+      <div class="client-section__margin">
+      <div class="client-section__header">
+        <p>Our clients</p>
+        <p>Trusted by</p>
+      </div>
       <div class="client-section__logo">
         <div>
           <Image
@@ -176,11 +268,25 @@ import Briefcase from "../components/icons/briefcase.astro";
           />
         </div>
       </div>
+    </div>
+    </section>
+
+    {/** Get in touch*/}
+    <section class="getintouch">
+      <div class="getintouch-margin">
+      <p>Get in touch with us</p>
+      <p>Empowering You with Solutions: Contact Us for Excellence</p>
+      <button><a href="/contact">Contact us</a></button>
+    </div>
     </section>
 
       {/*Testimonials */}
       <section class="testimonial">
-        <div class="testimonial-title"><p>Testimonials</p></div>
+        <div class="testimonial-margin">
+        <div class="testimonial-title">
+          <p>Testimonials</p>
+          <p>What people say about us</p>
+        </div>
         <div class="testimonial-cards">
         <div>
           <p>
@@ -208,7 +314,7 @@ import Briefcase from "../components/icons/briefcase.astro";
         
 
 
-        
+      </div>
       </div>
       </section>
     </section>
@@ -230,34 +336,126 @@ import Briefcase from "../components/icons/briefcase.astro";
   main {
     width: 100vw;
     height: 100vh;
+
   }
 
-  .wrapper {
+  /* .wrapper {
     margin: 150px auto;
     width: 80vw;
+  } */
+
+  .cards{
+    position: relative;
+    width: 100vw;
+    height: 70%;
+    background-color: #f4f4f4;
+
+
   }
 
-  .blow-text {
+  .cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 80vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
+    margin: 0 auto;
+    position: absolute;
+    top: -50px;
+    left: 10vw;
+    z-index: 999;
   }
 
-  .blow-text p {
-    font-size: 56px;
-    font-weight: 800;
-    text-wrap: wrap;
-    text-align: center;
-    width: 50%;
-    color: #080875;
+  .card-business{
+    padding: 20px;
+    display:flex;
+    flex-flow: column;
+    justify-content:space-between;
+    gap:20px;
+    /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08); */
+    position: relative;
+    overflow: hidden;
+    background-color: white;
   }
+
+  .card-business:nth-child(1){
+    border-right:2px solid #f4f4f4;
+  }
+
+  .card-business:nth-child(2){
+    border-right:2px solid #f4f4f4;
+
+  }
+
+  .card-business:nth-child(3){
+    border-right:2px solid #f4f4f4;
+  }
+
+  .card-business:nth-child(4){
+   
+  }
+
+  .card-text{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    left: 10vw;
+    gap:40px;
+    padding-bottom: 10px;
+
+
+
+    & div {
+    width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     gap:20px;
+       
+      & p:nth-child(2){
+        font-size: 36px;
+        color: darkblue;
+        font-weight: 700;
+        width: 50%;
+        text-align: center;
+      }
+
+      & button{
+        padding: 16px 20px;
+      border: none;
+      font-size: 16px;
+      font-weight: 800;
+      background-color: orange;
+      color: black;
+      border-radius: 20px;
+      width: 15%;
+      }
+
+      & button a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+  }
+
 
   .service-section {
     display: flex;
     flex-flow: column nowrap;
     margin-top: 150px;
-    gap:60px
+    gap:60px;
+    background-color:#f4f4f4;
+    padding: 70px 0;
+
+
+  }
+
+  .service-section-margin{
+    width: 80vw;
+      margin:0 auto;
   }
 
   .service-header {
@@ -268,10 +466,21 @@ import Briefcase from "../components/icons/briefcase.astro";
     color:black;
   }
 
-  .service-header p:nth-child(1) {
-    font-size: 48px;
-    color: black;
+  .service-header p:nth-child(2) {
+    font-size:36px;
+    font-weight: 700;
+    color: darkblue;
     position: relative;
+    width: 40%;
+  }
+
+
+  .service-header p:nth-child(3) {
+
+    color: black;
+
+    width: 80%;
+    margin-bottom: 60px;
   }
 
 
@@ -287,7 +496,7 @@ import Briefcase from "../components/icons/briefcase.astro";
 
 
   .service-card__business:hover{
-    /* box-shadow: none; */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   }
 
 .service-card__business > div {
@@ -297,9 +506,18 @@ import Briefcase from "../components/icons/briefcase.astro";
 }
 
 .service-icon{
-  padding:30px;
+  padding:20px;
+  border-radius:50%;
+  background-color:rgba(72,61,139, 0.08);
+  width: 39%;
+}
+
+
+.service-icon__service{
+  padding:20px;
   border-radius:20px;
-  background-color:rgba(72,61,139, 0.2);
+  background-color:rgba(72,61,139, 0.08);
+
 }
 
 
@@ -320,9 +538,10 @@ import Briefcase from "../components/icons/briefcase.astro";
     justify-content:space-between;
     gap:20px;
     border-radius: 20px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  
     position: relative;
     overflow: hidden;
+    background-color: white;
  
    
 
@@ -340,38 +559,61 @@ import Briefcase from "../components/icons/briefcase.astro";
   }
   
   .explore{
-    margin-top: 150px;
+  
     display: flex;
     flex-flow: row wrap;
+     margin: 150px auto;
+    width: 80vw;
   } 
 
   .explore-title{
-    font-size: 48px;
-    margin-bottom: 60px;
-    position: relative;
+    & p:first-child {
+      margin-bottom: 40px;
+    }
+
+  }
+
+.explore-vision{
+  display: flex;
+  gap:20px;
+
+  & p:first-child{
+    margin-bottom: 10px;
+    font-weight: 600;
   }
 
 
+}
+
+.explore-vision__section{
+  display: flex;
+  flex-flow: column;
+  gap:40px;
+}
+
+
+ 
    
 
   .explore-section {
     display: flex;
     width: 100%;
    justify-content: space-between;
-    background: linear-gradient(#5852F2 , darkblue);
-    padding: 40px;
-    position: relative;
-    border-radius: 20px;
+   gap: 40px;
+
+
   }
 
 
   .explore-section__image {
-    width: 40%;
-    color:white;
+    width: 50%;
+    color:black;
 
     & h3 {
-      font-size:40px;
+      font-size:36px;
       margin-bottom: 40px;
+      font-weight: 700;
+      color: darkblue;
     }
   }
 
@@ -381,13 +623,25 @@ import Briefcase from "../components/icons/briefcase.astro";
     border-radius: 20px;
   }
 
+  .explore-icon{
+    padding:20px;
+  border-radius:50%;
+  background-color:rgba(72,61,139, 0.08);
+height: 40%;
+
+  }
+
 
 
   .client-section {
     display: flex;
     flex-flow: column;
-    margin-top: 150px;
- 
+  }
+
+  .client-section__margin{
+    margin: 150px auto;
+    width: 80vw;
+
   }
 
   .client-section__logo {
@@ -400,23 +654,80 @@ import Briefcase from "../components/icons/briefcase.astro";
     gap:60px;
   }
 
-  .client-section__header p {
-    font-size: 48px;
-    position: relative;
+  .client-section__header{
+
+    & p:nth-child(2) {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 40px;
+      color: darkblue;
+    }
+  }
+
+
+
+  .getintouch{
+    background-color: #f4f4f4;
+    padding: 70px 0;
+  }
+
+  .getintouch-margin{
+    width: 80vw;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap:20px;
+
+
+
+    & p:nth-child(2){
+      font-size:36px;
+      width: 60%;
+      justify-self: center;
+      font-weight: 700;
+      color: darkblue;
+    }
+
+    & button{
+        padding: 16px 20px;
+      border: none;
+      font-size: 16px;
+      font-weight: 800;
+      background-color: orange;
+      color: black;
+      border-radius: 20px;
+      width: 15%;
+      }
+
+
+      & button a {
+        text-decoration: none;
+        color: black;
+      }
   }
 
 
 
   .testimonial{
-    margin-top: 150px;
+    margin: 150px 0;
     display: flex;
     flex-flow:column;
    
   }
 
   .testimonial-title{
-    font-size:48px;
-    position: relative;
+    
+
+    & p:nth-child(2) {
+      font-size:36px;
+      margin-top: 40px;
+      font-weight: 700;
+      color: darkblue;
+  
+    }
   }
 
 
@@ -432,6 +743,7 @@ import Briefcase from "../components/icons/briefcase.astro";
     flex-flow: column;
     gap:10px;
     border-radius: 20px;
+    line-height: 1.6;
 
     & p:nth-child(2){
       font-weight:bold;
@@ -443,7 +755,7 @@ import Briefcase from "../components/icons/briefcase.astro";
 
   .testimonial-cards > div{
     border:1px solid #f4f4f4;
-    padding:20px;
+    padding:30px;
     position:relative;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
   }
@@ -454,10 +766,17 @@ import Briefcase from "../components/icons/briefcase.astro";
     position: absolute;
     top:-25px;
     background-color:white;
+    color: #c4c4c4;
     width: 50px;
     height: 35px;
     text-align: center;
    
+  }
+
+
+  .testimonial-margin{
+    margin:0 auto;
+    width:80vw;
   }
 
 
@@ -467,22 +786,49 @@ import Briefcase from "../components/icons/briefcase.astro";
   {/*Media queries */}
 
   @media screen and (max-width: 800px) {
-  .service-section {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 150px 24px;
 
 
-    & .service-card {
-      width: 100%;
-      height: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
 
-    & .service-header{
-      width: 100%;
-    }
+  .card-business:nth-child(1){
+    border-bottom:2px solid #f4f4f4;
   }
+
+  .card-business:nth-child(2){
+    border-bottom:2px solid #f4f4f4;
+
+  }
+
+  .card-business:nth-child(3){
+    border-bottom:2px solid #f4f4f4;
+  }
+
+  .cards{
+    height: 100%;
+  }
+
+  .cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 87vw;
+    margin: 0 auto;
+    position: absolute;
+    top: -50px;
+    left: 6.5vw;
+    z-index: 999;
+  }
+
+
+  .card-text{
+display: none;
+  }
+
+
+  .client-section__margin{
+    margin: 0px auto;
+    width: 100%;
+
+  }
+
   
 
   .client-section__logo {
@@ -494,6 +840,8 @@ import Briefcase from "../components/icons/briefcase.astro";
     gap:40px;
     overflow-x: scroll;
   }
+
+
 
 
   .client-section{
@@ -508,9 +856,7 @@ import Briefcase from "../components/icons/briefcase.astro";
     color:black;
   }
 
-  .service-card {
-    width: 100%;
-  }
+
 
   .service-card__business {
     width: 100%;
@@ -522,13 +868,66 @@ import Briefcase from "../components/icons/briefcase.astro";
   }
 
   .service-card__business > div {
- 
   justify-content:center;
+}
 
+.service-section-margin{
+    width: 87vw;
+    margin: ;
+    
+    
+  }
+
+
+  .service-section {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 150px 0px;
+    width: 100%;
+
+
+    & .service-card {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    & .service-header{
+      width: 100%;
+    }
+  }
+
+
+  .service-header p:nth-child(2) {
+  
+    width: 100%;
+  }
+
+
+  .service-header p:nth-child(3) {
+
+    color: black;
+
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .service-icon{
+  padding:20px;
+  border-radius:50%;
+  background-color:rgba(72,61,139, 0.08);
+  width: 29%;
 }
 
 
-
+.explore{
+  
+  display: flex;
+  flex-flow: row wrap;
+ 
+  width: 100vw;
+} 
 
   
    .explore-section{
@@ -538,16 +937,56 @@ import Briefcase from "../components/icons/briefcase.astro";
     gap:40px;
   } 
 
+  .explore{
+  
+  display: flex;
+  flex-flow: column wrap;
+   
+} 
+
   .explore-section__image {
+    
     width: 100%;
+  
   }
 
   .explore-section__text {
     width: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .explore-title{
-    margin: 0 24px 60px 24px;
+    margin: 0 24px 0px 24px;
+  }
+
+  .getintouch{}
+
+  .getintouch-margin{
+    width: 87vw;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap:20px;
+
+
+
+    & p:nth-child(2){
+ 
+      width: 100%;
+
+    }
+
+    & button{
+      width: 50%;
+      }
+
   }
 
 
@@ -557,6 +996,11 @@ import Briefcase from "../components/icons/briefcase.astro";
     display: flex;
     flex-flow:column;
    
+  }
+
+  .testimonial-margin{
+    margin:0 auto;
+    width:87vw;
   }
 
   .testimonial-cards{

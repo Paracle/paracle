@@ -103,44 +103,47 @@ import Ranking from "../components/icons/ranking.astro";
         </section>
       </section>
 
-      <section class="innovations">
-        <div>
-          <p>Innovations</p>
-          <p>
-            At Paracletworld Service Limited, we use new and effective
-            approaches with strategies in making sure that our clients get
-            better than what they have expected.
-          </p>
-        </div>
+      <section class="innovation-wrap">
+        <p>Our Core Values</p>
+        <section class="innovations">
+          <div>
+            <p>Innovations</p>
+            <p>
+              At Paracletworld Service Limited, we use new and effective
+              approaches with strategies in making sure that our clients get
+              better than what they have expected.
+            </p>
+          </div>
 
-        <div>
-          <p>Professionalism</p>
-          <p>
-            We consist of highly respected individuals with years of experience
-            built on professionalism and commitment to delivering value-added to
-            all clients.
-          </p>
-        </div>
+          <div>
+            <p>Professionalism</p>
+            <p>
+              We consist of highly respected individuals with years of
+              experience built on professionalism and commitment to delivering
+              value-added to all clients.
+            </p>
+          </div>
 
-        <div>
-          <p>Integrity</p>
-          <p>
-            We uphold our reputation with a deep commitment to delivering a
-            seamless and straightforward experience for every client. We believe
-            this is paramount to positioning the company in the marketplace as
-            excellent.
-          </p>
-        </div>
+          <div>
+            <p>Integrity</p>
+            <p>
+              We uphold our reputation with a deep commitment to delivering a
+              seamless and straightforward experience for every client. We
+              believe this is paramount to positioning the company in the
+              marketplace as excellent.
+            </p>
+          </div>
 
-        <div>
-          <p>Excellence</p>
-          <p>
-            We go the extra mile by cutting-edge with international best
-            practices to meet the trendy demands of our diverse clients; we are
-            driven to always improve in everything we do by providing the best,
-            outstanding services.
-          </p>
-        </div>
+          <div>
+            <p>Excellence</p>
+            <p>
+              We go the extra mile by cutting-edge with international best
+              practices to meet the trendy demands of our diverse clients; we
+              are driven to always improve in everything we do by providing the
+              best, outstanding services.
+            </p>
+          </div>
+        </section>
       </section>
     </section>
     <Footer />
@@ -273,10 +276,21 @@ import Ranking from "../components/icons/ranking.astro";
     }
   }
 
+  .innovation-wrap {
+    margin-top: 150px;
+  }
+
+  .innovation-wrap > p {
+    font-size: 36px;
+    font-weight: 700;
+    color: darkblue;
+    margin-bottom: 60px;
+  }
+
   .innovations {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    margin-top: 150px;
+
     gap: 40px;
 
     & p:first-of-type {
@@ -332,8 +346,15 @@ import Ranking from "../components/icons/ranking.astro";
     .innovations {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      margin: 150px 24px;
+      margin: 60px 24px;
       gap: 40px;
+    }
+
+    .innovation-wrap > p {
+      font-size: 36px;
+      font-weight: 700;
+      color: darkblue;
+      margin: 0px 24px;
     }
 
     .wrapper {

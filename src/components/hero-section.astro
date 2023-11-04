@@ -132,6 +132,39 @@ import Navbar from "./navbar.astro";
     margin: 0 auto;
   }
 
+  .headings h1 {
+    position: relative;
+    animation: enter 3s linear forwards;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .headings p {
+    animation: reveal 3s 300ms linear forwards;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  .headings button {
+    animation: reveal 3s 900ms linear forwards;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  @keyframes enter {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  @keyframes reveal {
+    100% {
+      opacity: 1;
+    }
+  }
+
   @keyframes world {
     0% {
       background-position: 0 0;

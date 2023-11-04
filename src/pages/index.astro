@@ -100,7 +100,7 @@ import Bulb from "../components/icons/bulb.astro";
           <h3>Elevate Your Business with Expert Guidance</h3>
           <div class="explore-vision__section">
 
-            <div class="explore-vision">
+            <div class="explore-vision one">
               <div class="explore-icon"><Target/></div>
               <div>
                 <p>Our Mission</p>
@@ -111,7 +111,7 @@ import Bulb from "../components/icons/bulb.astro";
             </div>
 
 
-            <div class="explore-vision">
+            <div class="explore-vision two">
                 <div class="explore-icon"><Bulb/></div>
                 <div>
                   <p>Our Vision</p>
@@ -402,6 +402,8 @@ import Bulb from "../components/icons/bulb.astro";
     left: 10vw;
     gap:40px;
     padding-bottom: 10px;
+    animation: scrollsimp 1s linear forwards;
+    animation-timeline: view();
 
 
 
@@ -456,6 +458,8 @@ import Bulb from "../components/icons/bulb.astro";
   .service-section-margin{
     width: 80vw;
       margin:0 auto;
+      animation: scrollsimp 1s linear forwards;
+    animation-timeline: view();
   }
 
   .service-header {
@@ -538,10 +542,11 @@ import Bulb from "../components/icons/bulb.astro";
     justify-content:space-between;
     gap:20px;
     border-radius: 20px;
-  
     position: relative;
     overflow: hidden;
     background-color: white;
+    animation: explorevision 1s linear forwards;
+    animation-timeline: view();
  
    
 
@@ -564,11 +569,16 @@ import Bulb from "../components/icons/bulb.astro";
     flex-flow: row wrap;
      margin: 150px auto;
     width: 80vw;
+    animation:explore 1s linear forwards, explorevision 1s linear forwards;
+    animation-timeline: view();
+   
+    
   } 
 
   .explore-title{
     & p:first-child {
       margin-bottom: 40px;
+   
     }
 
   }
@@ -583,6 +593,17 @@ import Bulb from "../components/icons/bulb.astro";
   }
 
 
+}
+
+.explore-vision.one{
+  animation:explorevision 2s 500ms linear forwards;
+   animation-timeline:view();
+}
+
+
+.explore-vision.two{
+  animation:explorevision 3s 500ms linear forwards;
+   animation-timeline:view();
 }
 
 .explore-vision__section{
@@ -600,6 +621,8 @@ import Bulb from "../components/icons/bulb.astro";
     width: 100%;
    justify-content: space-between;
    gap: 40px;
+   /* animation:explore 2s linear forwards, explorevision auto linear forwards;
+   animation-timeline:view(); */
 
 
   }
@@ -636,6 +659,8 @@ height: 40%;
   .client-section {
     display: flex;
     flex-flow: column;
+    animation: scrollsimp 2s linear forwards;
+    animation-timeline: view();
   }
 
   .client-section__margin{
@@ -667,8 +692,10 @@ height: 40%;
 
 
   .getintouch{
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     padding: 70px 0;
+    animation: backgroundscroll 2s linear forwards;
+    animation-timeline:view();
   }
 
   .getintouch-margin{
@@ -715,6 +742,8 @@ height: 40%;
     margin: 150px 0;
     display: flex;
     flex-flow:column;
+    animation:scrollsimp 2s linear forwards;
+    animation-timeline:view();
    
   }
 
@@ -758,7 +787,9 @@ height: 40%;
     padding:30px;
     position:relative;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+
   }
+
 
   .testimonial-cards > div::after {
     content: "❝";
@@ -770,6 +801,7 @@ height: 40%;
     width: 50px;
     height: 35px;
     text-align: center;
+
    
   }
 
@@ -778,6 +810,56 @@ height: 40%;
     margin:0 auto;
     width:80vw;
   }
+
+
+
+  @keyframes scrollsimp {
+ 0%{
+  transform: translateY(50%);
+  
+ }
+
+ 40%, 100%{
+    transform: translateY(0%);
+
+  }
+}
+
+@keyframes explore {
+  0%{
+  transform: translateY(20%);
+  
+ }
+
+ 40%, 100%{
+    transform: translateY(0%);
+
+  }
+}
+
+
+@keyframes explorevision {
+  0%{
+  transform: translateY(80%);
+  
+ }
+
+ 50%, 100%{
+    transform: translateY(0%);
+
+  }
+}
+
+@keyframes backgroundscroll {
+  0%{
+ background:linear-gradient(white, white) 50% 50% / 0vmin 0vmin no-repeat;
+ }
+
+ 50%, 100%{
+  background:linear-gradient(#f4f4f4, #f4f4f4) 50% 0 / 200vmin 100vmin no-repeat;
+
+  }
+}
 
 
 

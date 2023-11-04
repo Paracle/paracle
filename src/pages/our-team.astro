@@ -58,7 +58,7 @@ import Footer from "../components/footer.astro";
             <p>Branding, Marketing and Sales</p>
           </span>
         </div>
-        <div>
+        <!-- <div>
           <Image
             src={Image3}
             width={200}
@@ -70,7 +70,7 @@ import Footer from "../components/footer.astro";
             <p>OKUNADE OLUWATOBI</p>
             <p>HR / Administration</p>
           </span>
-        </div>
+        </div> -->
         <div>
           <Image
             src={Image4}
@@ -125,7 +125,8 @@ import Footer from "../components/footer.astro";
     }
 
     .profile {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       margin-top: 150px;
       gap: 20px;
       & div:nth-child(1) {
@@ -194,7 +195,7 @@ import Footer from "../components/footer.astro";
         }
       }
 
-      & div:nth-child(4) {
+      /* & div:nth-child(4) {
         padding: 30px;
         border-radius: 20px;
         justify-content: center;
@@ -214,7 +215,7 @@ import Footer from "../components/footer.astro";
           margin-top: 20px;
           font-weight: 700;
         }
-      }
+      } */
     }
 
     @media screen and (max-width: 800px) {

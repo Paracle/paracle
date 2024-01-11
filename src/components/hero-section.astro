@@ -21,14 +21,11 @@ import Navbar from "./navbar.astro";
             World Class Excellence in <b style="">Consultancy</b>
           </h1>
           <p>
-            We make the greatest impact through collaboration with our clients,
-            as our diverse, global teams help organizations tackle the most
-            urgent dynamic challenges
+            We make the greatest impact through collaboration with our clients, as our diverse,
+            global teams help organizations tackle the most urgent dynamic challenges
           </p>
           <button
-            ><a href="/services" style=" text-decoration: none;"
-              >Checkout our services</a
-            ></button
+            ><a href="/services" style=" text-decoration: none;">Checkout our services</a></button
           >
         </div>
         <div class="world-map">
@@ -84,9 +81,16 @@ import Navbar from "./navbar.astro";
       font-size: 16px;
       font-weight: 800;
       background-color: orange;
-
       border-radius: 20px;
       width: 40%;
+      position: relative;
+      outline: 1px solid white;
+      outline-offset: 0.5rem;
+      cursor: pointer;
+    }
+
+    & button:hover {
+      background-color: white;
     }
 
     & button a {
@@ -140,13 +144,13 @@ import Navbar from "./navbar.astro";
 
   .headings p {
     animation: reveal 3s 300ms linear forwards;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease-in;
   }
 
   .headings button {
     animation: reveal 3s 900ms linear forwards;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s ease-in;
   }
 

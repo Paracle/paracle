@@ -1,0 +1,42 @@
+---
+import Setting from "../components/icons/setting.astro";
+import Navbar from "../components/navbar.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404page">
+  <main>
+    <Navbar logo={false} svgcolor="black" background={true} />
+    <div class="error">
+      <div><Setting /></div>
+      <p>This page is currently under construction</p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .error {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      animation: rotate 5s linear infinite;
+      transform-origin: center;
+    }
+
+    & p {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>

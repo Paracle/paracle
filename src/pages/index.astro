@@ -17,6 +17,9 @@ import Consult from "../components/icons/consult.astro";
 import Connect from "../components/icons/connect.astro";
 import Briefcase from "../components/icons/briefcase.astro";
 import Bulb from "../components/icons/bulb.astro";
+import Book from "../components/icons/book.astro";
+import Training from "../components/icons/training.astro";
+import Human from "../components/icons/human.astro"
 
 ---
 
@@ -42,7 +45,7 @@ import Bulb from "../components/icons/bulb.astro";
 
       <div class="card-business">
         <div class="service-icon">
-          <Briefcase />
+          <Training />
         </div>
         <div class="section-para">
           <h4>TRAINING & DEVELOPMENT</h4>
@@ -54,7 +57,7 @@ import Bulb from "../components/icons/bulb.astro";
 
       <div class="card-business">
         <div class="service-icon">
-          <Briefcase />
+          <Human />
         </div>
         <div class="section-para">
           <h4>HUMAN RESOURCE OUTSOURCING</h4>
@@ -66,7 +69,7 @@ import Bulb from "../components/icons/bulb.astro";
       
       <div class="card-business">
         <div class="service-icon">
-          <Briefcase />
+          <Book />
         </div>
         <div class="section-para">
           <h4>PROPOSAL DRAFTING</h4>
@@ -350,7 +353,6 @@ import Bulb from "../components/icons/bulb.astro";
     height: 70%;
     background-color: #f4f4f4;
 
-
   }
 
   .cards-grid{
@@ -362,18 +364,22 @@ import Bulb from "../components/icons/bulb.astro";
     top: -50px;
     left: 10vw;
     z-index: 999;
+  
   }
 
   .card-business{
     padding: 20px;
     display:flex;
     flex-flow: column;
+    align-items: center;
+    text-align: center;
     justify-content:space-between;
     gap:20px;
     /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08); */
     position: relative;
     overflow: hidden;
     background-color: white;
+    
   }
 
   .card-business:nth-child(1){
@@ -457,7 +463,7 @@ import Bulb from "../components/icons/bulb.astro";
 
   .service-section-margin{
     width: 80vw;
-      margin:0 auto;
+      margin:0px auto 100px auto;
       animation: scrollsimp 1s linear forwards;
     animation-timeline: view();
   }
@@ -567,7 +573,7 @@ import Bulb from "../components/icons/bulb.astro";
   
     display: flex;
     flex-flow: row wrap;
-     margin: 150px auto;
+     margin: 0px auto;
     width: 80vw;
     animation:explore 1s linear forwards, explorevision 1s linear forwards;
     animation-timeline: view();
@@ -578,6 +584,7 @@ import Bulb from "../components/icons/bulb.astro";
   .explore-title{
     & p:first-child {
       margin-bottom: 40px;
+      margin-top:60px;
    
     }
 
@@ -664,7 +671,7 @@ height: 40%;
   }
 
   .client-section__margin{
-    margin: 150px auto;
+    margin: 60px auto 150px auto;
     width: 80vw;
 
   }
@@ -739,7 +746,7 @@ height: 40%;
 
 
   .testimonial{
-    margin: 150px 0;
+    margin: 60px 0 150px 0;
     display: flex;
     flex-flow:column;
     animation:scrollsimp 2s linear forwards;

@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/nav.astro";
+import Alliance from "../../public/img/alliance log.jpeg";
+import { Image } from "astro:assets";
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="partners">
+  <main>
+    <section>
+      <section class="partbg">
+        <div><Nav /></div>
+        <div
+          class="flex md:flex-row flex-col mx-auto container text-white md:pt-20 pt-40 pb-[100px]"
+        >
+          <div class="mx-6 md:mx-0 gap-10 md:gap-20 flex flex-col md:flex-row">
+            <div class="md:w-1/2">
+              <div class="flex flex-col gap-10 text-white">
+                <div class="flex">
+                  <p
+                    class="flex font-Kumbh bg-white/20 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
+                  >
+                    Our partners
+                  </p>
+                </div>
+                <h2 class="md:text-[2.3rem] text-[2rem] mb-10">
+                  Paracleworld and Alliance College
+                </h2>
+              </div>
+              <div class="flex flex-col gap-6 text-justify">
+                <p>
+                  Thrilled to share the news of Paracletworld Service Limited Service Limited's
+                  strategic collaboration with @Alliance College - Arba Minch! Together, we're
+                  reshaping Entrepreneurship and Education through dynamic short-term training
+                  programs and groundbreaking research projects in business development.
+                </p>
+                <ul class="space-y-2">
+                  <p class="text-[2rem]">Objectives</p>
+                  <li>
+                    Delivering unparalleled global training. Pioneering impactful joint research
+                    initiatives. Facilitating the exchange of knowledge and expertise. Anticipated
+                    Outcomes:
+                  </li>
+                  <li>
+                    Elevated training delivery standards. Enhanced knowledge in Entrepreneurship and
+                    business growth.
+                  </li>
+                  <li>Publication of groundbreaking joint research. Our Commitments:</li>
+                  <li class="list-disc ml-3">Provision of top-notch training services.</li>
+                  <li class="list-disc ml-3">Sharing technical expertise.</li>
+                  <li class="list-disc ml-3">Supplying essential resources.</li>
+                  <li class="list-disc ml-3">Conducting joint research projects.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-1/2">
+              <Image
+                src={Alliance}
+                width={500}
+                height={300}
+                alt="sample pics"
+                class="h-[80%] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .partbg {
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        0% 0% / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
+        0% 0% / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 5, 117, 1) 80%);
+  }
+</style>

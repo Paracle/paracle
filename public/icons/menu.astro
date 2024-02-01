@@ -1,0 +1,29 @@
+---
+const { svgcolor } = Astro.props;
+---
+
+<div style={{ display: "flex" }}>
+  <svg
+    width="34"
+    height="34"
+    viewBox="0 0 24 24"
+    fill={svgcolor}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 7H21"
+      stroke={svgcolor}
+      stroke-width="1.5"
+      stroke-linecap="round"></path>
+    <path
+      d="M3 12H21"
+      stroke={svgcolor}
+      stroke-width="1.5"
+      stroke-linecap="round"></path>
+    <path
+      d="M3 17H21"
+      stroke={svgcolor}
+      stroke-width="1.5"
+      stroke-linecap="round"></path>
+  </svg>
+</div>

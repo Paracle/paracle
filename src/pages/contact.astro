@@ -1,230 +1,87 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/navbar.astro";
+import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
 ---
 
 <Layout title="contact">
   <main>
-    <header>
-      <Navbar logo={false} svgcolor="black" background={true} />
-    </header>
+    <section class="contactbg">
+      <div>
+        <Nav />
+      </div>
+      <div class="mx-auto container flex flex-col gap-10 pt-40 md:pt-20 text-white">
+        <div class="mx-6 md:mx-0 flex flex-col gap-10">
+          <div class="flex flex-col gap-4">
+            <h2 class="text-[28px]">Get in touch with us</h2>
+            <p class="md:w-[70%] text-justify">
+              Welcome to Paracletworld - your partner in business success. We're here to assist you
+              in achieving your goals and realizing your business's full potential. Whether you have
+              questions, need expert advice, or want to explore collaboration opportunities, we're
+              just a message or call away.
+            </p>
+          </div>
 
-    {/*hero section */}
-    <section class="contact">
-      <p>Contact us</p>
+          <div class="flex flex-col gap-4">
+            <h3 class="text-[28px]">How to reach us:</h3>
+            <ul>
+              <li>+234(0)8131888798</li>
+              <li>
+                <a href="mailto:paracletworld.1@gmail.com"></a>paracletworld.1@gmail.com
+              </li>
+              <li>House 15 Wumba Apo Abuja, Nigeria</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <h3 class="text-[28px]">Connect online:</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100087592749509&mibextid=LQQJ4d"
+                  target="_blank">Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://mobile.twitter.com/paracletworld1" target="_blank">Twitter</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/paracletworld" target="_blank">Instagram</a>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/paracletworld-service-limited/"
+                    target="_blank">LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@paracletworld.1?_t=8gTZQdVX23y&_r=1"
+                    target="_blank">Tiktok</a
+                  >
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <div class="contactus">
-      <div>
-        <p>Get in touch with us</p>
-        <p>
-          Welcome to Paracletworld - your partner in business success. We're here to assist you in
-          achieving your goals and realizing your business's full potential. Whether you have
-          questions, need expert advice, or want to explore collaboration opportunities, we're just
-          a message or call away.
-        </p>
-      </div>
-
-      <div>
-        <p>How to reach us:</p>
-        <ul>
-          <li>+234(0)8131888798</li>
-          <li>
-            <a href="mailto:paracletworld.1@gmail.com"></a>paracletworld.1@gmail.com
-          </li>
-          <li>House 15 Wumba Apo Abuja, Nigeria</li>
-        </ul>
-      </div>
-
-      <div>
-        <p>Connect online:</p>
-        <ul>
-          <li>
-            <a
-              href="https://www.facebook.com/profile.php?id=100087592749509&mibextid=LQQJ4d"
-              target="_blank">Facebook</a
-            >
-          </li>
-          <li>
-            <a href="https://mobile.twitter.com/paracletworld1" target="_blank">Twitter</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/paracletworld" target="_blank">Instagram</a>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/paracletworld-service-limited/"
-                target="_blank">LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://www.tiktok.com/@paracletworld.1?_t=8gTZQdVX23y&_r=1" target="_blank"
-                >Tiktok</a
-              >
-            </li>
-          </li>
-        </ul>
-      </div>
-
-      {/*form */}
-      <!-- <section class="contact-form">
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Subject" />
-          <textarea cols="10" rows="10" placeholder="Type your message here"
-          ></textarea>
-          <button>Send message</button>
-        </form>
-      </section> -->
-    </div>
     <Footer />
   </main>
-
-  <style>
-    .contact {
-      width: 100vw;
-      margin: 0px auto;
-      height: 30vh;
-      background-image: url("../components/images/hero.jpg");
-      background-position: 150px 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      & p {
-        font-size: 48px;
-        font-weight: 700;
-      }
-    }
-
-    .contactus {
-      width: 80vw;
-      margin: 100px auto;
-
-      & div:first-child {
-        & p:first-child {
-          font-size: 36px;
-          font-weight: 700;
-          color: darkblue;
-        }
-
-        & p:nth-child(2) {
-          width: 70%;
-          line-height: 1.5;
-        }
-      }
-
-      & div:nth-child(2) {
-        & p:first-child {
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        & ul {
-          display: flex;
-          flex-flow: column;
-          gap: 10px;
-          margin: 0;
-          padding: 0;
-          font-weight: 600;
-          cursor: pointer;
-        }
-
-        & li {
-          list-style: none;
-        }
-
-        & a {
-          text-decoration: none;
-          color: black;
-        }
-
-        & a:hover {
-          text-decoration: none;
-          color: orange;
-        }
-      }
-
-      & div:nth-child(3) {
-        & p {
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        & ul {
-          display: flex;
-          flex-flow: column;
-          gap: 10px;
-          margin: 0;
-          padding: 0;
-          font-weight: 600;
-        }
-
-        & li {
-          list-style: none;
-        }
-
-        & a {
-          text-decoration: none;
-          color: #000;
-        }
-
-        & a:hover {
-          color: orange;
-        }
-      }
-    }
-
-    .contact-form {
-      width: 80vw;
-      margin: 150px auto;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    form {
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 20px;
-      width: 40%;
-      background-color: white;
-      padding: 40px;
-      box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      & input {
-        padding: 12px 16px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-      }
-
-      & textarea {
-        padding: 16px;
-        border-radius: 8px;
-      }
-
-      & button {
-        padding: 12px 16px;
-        background-color: orange;
-        border: none;
-        border-radius: 8px;
-        font-weight: 800;
-      }
-    }
-
-    @media screen and (max-width: 800px) {
-      .contact {
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      form {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 20px;
-        width: 100%;
-      }
-    }
-  </style>
 </Layout>
+
+<style>
+  .contactbg {
+    height: 100vh;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        0% 0% / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
+        0% 0% / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 5, 117, 1) 80%);
+  }
+</style>

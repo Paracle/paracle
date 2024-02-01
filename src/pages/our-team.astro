@@ -1,250 +1,155 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/navbar.astro";
-import Image1 from "../components/images/image 1.jpg";
-import Image2 from "../components/images/image 2.jpg";
-import Image3 from "../components/images/image 3.jpg";
-import Image4 from "../components/images/image 4.jpg";
-import Image37 from "../components/images/image 37.png";
 import { Image } from "astro:assets";
+import traningpic1 from "../../public/img/image 37.png";
+import traningpic2 from "../../public/img/image 2.jpg";
+import traningpic3 from "../../public/img/image 3.jpg";
+import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
 ---
 
 <Layout title="our-team">
   <main>
-    <header>
-      <Navbar logo={false} svgcolor="black" background={true} />
-    </header>
-
-    {/*hero section */}
-    <section class="team">
-      <p>Our team</p>
-    </section>
-
-    {/*Main */}
-    <section class="wrapper">
-      <section class="team-para">
-        <p>
-          This is where professionalism and aspiration meet innovation, candor
-          fuels collaboration, and impossible surrenders to teamwork. We
-          champion the bold to achieve the extraordinary. We are a team with a
-          uniquely collaborative culture full of passionate people who care more
-          about your success.
-        </p>
-      </section>
-      <section class="profile">
-        <div>
-          <Image
-            src={Image37}
-            width={200}
-            height={200}
-            alt="profile pics"
-            class="image1"
-          />
-          <span>
-            <p>PAULLETT UGOCHI OGEAH</p>
-            <p>Chief Executive Officer</p>
-          </span>
-        </div>
-        <div>
-          <Image
-            src={Image2}
-            width={200}
-            height={200}
-            alt="profile pics"
-            class="image1"
-          />
-          <span>
-            <p>UGOCHUKWU PAUL</p>
-            <p>Branding, Marketing and Sales</p>
-          </span>
-        </div>
-        <!-- <div>
-          <Image
-            src={Image3}
-            width={200}
-            height={200}
-            alt="profile pics"
-            class="image1"
-          />
-          <span>
-            <p>OKUNADE OLUWATOBI</p>
-            <p>HR / Administration</p>
-          </span>
-        </div> -->
-        <div>
-          <Image
-            src={Image4}
-            width={200}
-            height={200}
-            alt="profile pics"
-            class="image1"
-          />
-          <span>
-            <p>(MrEsegbuyota Ahweyevu, B.Sc Marketing; MBA; Member, CIBN).</p>
-            <p>Financial Manager and Consultant</p>
-          </span>
+    <section>
+      <section class="teambg">
+        <div><Nav /></div>
+        <!-- team -->
+        <div class="flex flex-row mx-auto container gap-20 text-white md:pt-20 pt-40 pb-[100px]">
+          <div class="mx-6 md:mx-0 flex flex-col gap-10 md:gap-24 md:flex-row">
+            <div class="md:w-1/2">
+              <div class="flex flex-col gap-10 text-white">
+                <div class="flex">
+                  <p
+                    class="flex font-Kumbh bg-white/20 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
+                  >
+                    Our team
+                  </p>
+                </div>
+                <h2 class="text-[2.3rem] mb-10">
+                  Championing the bold to achieve the extraordinary
+                </h2>
+              </div>
+              <div class="flex flex-col gap-6">
+                <p>
+                  This is where professionalism and aspiration meet innovation, candor fuels
+                  collaboration, and impossible surrenders to teamwork.
+                </p>
+                <p>We champion the bold to achieve the extraordinary.</p>
+                <p>
+                  We are a team with a uniquely collaborative culture full of passionate people who
+                  care more about your success.
+                </p>
+              </div>
+            </div>
+            <div class="md:w-1/2">
+              <div class="photoimg">
+                <div class="flex flex-col justify-end items-center h-full">
+                  <h3>PAULLETT UGOCHI OGEAH</h3>
+                  <p>Chief Executive Officer</p>
+                </div>
+                <!-- <Image
+                src={traningpic1}
+                width={500}
+                height={300}
+                alt="sample pics"
+                class="h-[100%]"
+              /> -->
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section class="picbg py-[100px]">
+        <div class="grid mx-auto container">
+          <div
+            class="gap-20 mx-6 md:mx-0 grid-cols-[repeat(auto-fit,minmax(30ch,1fr))] grid md:grid-cols-[repeat(auto-fit,minmax(40ch,1fr))]"
+          >
+            <div class="photoimg2">
+              <div class="flex flex-col h-full justify-end text-white items-center">
+                <h3>UGOCHUKWU PAUL</h3>
+                <p>Branding, Marketing and Sales</p>
+              </div>
+              <!-- <Image src={traningpic1} width={500} height={300} alt="sample pics" class="h-[100%]" /> -->
+            </div>
+            <div class="photoimg3">
+              <div class="flex flex-col h-full justify-end text-center text-white items-center">
+                <h3 class="uppercase">Mr Esegbuyota Ahweyevu</h3>
+                <p>(B.Sc Marketing; MBA; Member, CIBN)</p>
+                <p>Financial Manager and Consultant</p>
+              </div>
+              <!-- <Image src={traningpic1} width={500} height={300} alt="sample pics" class="h-[100%]" /> -->
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-    <Footer />
   </main>
-
-  <style>
-    .team {
-      width: 80vw;
-      margin: 0 auto;
-      height: 30vh;
-      background-image: url("../components/images/hero.jpg");
-      background-position: top left;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      & p {
-        font-size: 48px;
-        font-weight: 700;
-      }
-    }
-
-    .team-para {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-
-      & p {
-        width: 70%;
-        text-align: LEFT;
-        font-size: 16px;
-        line-height: 1.6;
-      }
-    }
-
-    .wrapper {
-      margin: 60px auto;
-      width: 80vw;
-    }
-
-    .profile {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 150px;
-      gap: 20px;
-      & div:nth-child(1) {
-        padding: 30px;
-        border-radius: 20px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-
-        & .image1 {
-          border-radius: 20px;
-          object-fit: cover;
-          object-position: top;
-        }
-
-        & p {
-          margin-bottom: 0;
-          margin-top: 20px;
-          font-weight: 700;
-        }
-      }
-
-      & div:nth-child(2) {
-        padding: 30px;
-        border-radius: 20px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-
-        & .image1 {
-          border-radius: 20px;
-          object-fit: cover;
-          object-position: top;
-        }
-
-        & p {
-          margin-bottom: 0;
-          margin-top: 20px;
-          font-weight: 700;
-        }
-      }
-
-      & div:nth-child(3) {
-        padding: 30px;
-        border-radius: 20px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-
-        & .image1 {
-          border-radius: 20px;
-          object-fit: cover;
-          object-position: top;
-        }
-
-        & p {
-          margin-bottom: 0;
-          margin-top: 20px;
-          font-weight: 700;
-        }
-      }
-
-      /* & div:nth-child(4) {
-        padding: 30px;
-        border-radius: 20px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-
-        & .image1 {
-          border-radius: 20px;
-          object-fit: cover;
-          object-position: top;
-        }
-
-        & p {
-          margin-bottom: 0;
-          margin-top: 20px;
-          font-weight: 700;
-        }
-      } */
-    }
-
-    @media screen and (max-width: 800px) {
-      .team {
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      .profile {
-        display: flex;
-        flex-flow: column;
-        margin: 150px 24px;
-      }
-
-      .wrapper {
-        margin: 150px auto;
-        width: 100%;
-      }
-
-      .team-para {
-        width: 100%;
-        display: flex;
-
-        & p {
-          width: 100%;
-          margin: 0 24px;
-        }
-      }
-    }
-  </style>
+  <Footer />
 </Layout>
+
+<style>
+  .teambg {
+    width: 100vw;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        100% 0% / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
+        100% 0% / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 5, 117, 1) 0%, rgba(5, 76, 117, 1) 80%);
+  }
+
+  .picbg {
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        0% 0% / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
+        0% 0% / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 5, 117, 1) 80%);
+  }
+
+  .photoimg {
+    background-image: url("/img/image 37.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 0.6)) 50% /50%;
+    height: 100%;
+  }
+  .photoimg2 {
+    background-image: url("/img/image 2.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 0.7)) 50% /50%;
+    height: 100%;
+  }
+
+  .photoimg3 {
+    background-image: url("/img/image 4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0, 0.7)) 50% /50%;
+    height: 25rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .photoimg,
+    .photoimg2,
+    .photoimg3 {
+      height: 21rem;
+    }
+  }
+</style>

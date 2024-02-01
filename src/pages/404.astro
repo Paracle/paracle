@@ -6,8 +6,20 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="404page">
   <main>
     <div class="error">
-      <div><Setting /></div>
-      <p>This page is currently under construction</p>
+      <section class="flex items-center">
+        <p class="!text-[10rem]">4</p>
+        <div class="rox">
+          <Setting />
+        </div>
+        <p class="!text-[10rem]">4</p>
+      </section>
+
+      <p>Sorry, page not found</p>
+      <a href="/">
+        <button class="py-4 px-8 border-4 border-slate-900 mt-6 rounded-full font-semibold"
+          >← Back</button
+        >
+      </a>
     </div>
   </main>
 </Layout>
@@ -21,15 +33,15 @@ import Layout from "../layouts/Layout.astro";
     justify-content: center;
     align-items: center;
 
-    & > div {
-      animation: rotate 5s linear infinite;
-      transform-origin: center;
-    }
-
     & p {
       font-size: 2rem;
       font-weight: bold;
     }
+  }
+
+  .rox {
+    animation: rotate 5s linear infinite;
+    transform-origin: center;
   }
 
   @keyframes rotate {

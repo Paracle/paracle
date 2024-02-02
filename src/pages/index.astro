@@ -227,24 +227,25 @@ import Footer from "../components/footer.astro";
             </div>
             <h2 class="text-[2.3rem] mb-10">Trusted by</h2>
           </div>
-          <div class="flex flex-row items-center gap-10 overflow-auto">
-            <Image
-              src={alphajoe}
-              width={150}
-              height={100}
-              alt="alphajoe logo"
-              class="w-full h-full"
-            />
-
-            <Image src={kingee} width={80} height={100} alt="kingee logo" />
-            <Image src={Alliance} width={100} height={100} alt="Alliance logo" />
-
-            <Image src={dna} width={90} height={100} alt="dna logo" />
-
-            <Image src={fresh} width={100} height={100} alt="fresh logo" />
-            <Image src={nkv} width={150} height={100} alt="nkv logo" />
-            <Image src={repro} width={80} height={100} alt="repro logo" />
-            <Image src={Anchu} width={150} height={100} alt="Anchu logo" />
+          <div class="flex scroll">
+            <ul class="flex flex-row items-center gap-10 scroll-inner">
+              <li>
+                <Image
+                  src={alphajoe}
+                  width={150}
+                  height={100}
+                  alt="alphajoe logo"
+                  class="w-full h-full"
+                />
+              </li>
+              <li><Image src={kingee} width={80} height={100} alt="kingee logo" /></li>
+              <li><Image src={Alliance} width={100} height={100} alt="Alliance logo" /></li>
+              <li><Image src={dna} width={90} height={100} alt="dna logo" /></li>
+              <li><Image src={fresh} width={100} height={100} alt="fresh logo" /></li>
+              <li><Image src={nkv} width={150} height={100} alt="nkv logo" /></li>
+              <li><Image src={repro} width={80} height={100} alt="repro logo" /></li>
+              <li><Image src={Anchu} width={150} height={100} alt="Anchu logo" /></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -475,6 +476,25 @@ import Footer from "../components/footer.astro";
       transform: scale(1.2);
       transition: transform 1s linear;
     }
+
+    /* .scroll-inner {
+      animation: scroller 20s linear infinite;
+    }
+
+    .scroll {
+      max-width: max-content;
+
+      border: 2px solid white;
+      mask: linear-gradient(90deg, transparent, white 20% 80%);
+
+      -webkit-mask: linear-gradient(90deg, transparent, white 20% 80%, transparent);
+    } */
+
+    /* @keyframes scroller {
+      to {
+        transform: translate(calc(-50% - 2.5rem));
+      }
+    } */
 
     @media screen and (max-width: 768px) {
       .serv1,

@@ -16,11 +16,36 @@ import Logo from "../../public/icons/logopng.astro";
   </div>
   <div class="flex md:gap-32 gap-10 navmenu items-center pt-10 md:pt-0">
     <ul class="flex flex-row gap-0 font-semibold">
-      <li><a class="block px-4 py-2 cursor-pointer" href="/about">About</a></li>
-      <li><a class="block px-4 py-2 cursor-pointer" href="/services">Services</a></li>
-      <li><a class="block px-4 py-2 cursor-pointer" href="/our-team">Team</a></li>
-      <li><a class="block px-4 py-2 cursor-pointer" href="/partners">Partners</a></li>
-      <li><a class="block px-4 py-2 cursor-pointer" href="/contact">Contact us</a></li>
+      <li>
+        <a
+          class="block px-4 py-2 cursor-pointer hover:bg-white/20 hover:rounded-full hover:backdrop-blur-[30px]"
+          href="/about">About</a
+        >
+      </li>
+      <li>
+        <a
+          class="block px-4 py-2 cursor-pointer hover:bg-white/20 hover:rounded-full hover:backdrop-blur-[30px]"
+          href="/services">Services</a
+        >
+      </li>
+      <li>
+        <a
+          class="block px-4 py-2 cursor-pointer hover:bg-white/20 hover:rounded-full hover:backdrop-blur-[30px]"
+          href="/our-team">Team</a
+        >
+      </li>
+      <li>
+        <a
+          class="block px-4 py-2 cursor-pointer hover:bg-white/20 hover:rounded-full hover:backdrop-blur-[30px]"
+          href="/partners">Partners</a
+        >
+      </li>
+      <li>
+        <a
+          class="block px-4 py-2 cursor-pointer hover:bg-white/20 hover:rounded-full hover:backdrop-blur-[30px]"
+          href="/contact">Contact us</a
+        >
+      </li>
     </ul>
 
     <div>
@@ -49,6 +74,8 @@ import Logo from "../../public/icons/logopng.astro";
   .buttonstyle:hover {
     padding: 1rem 2rem;
     transition: padding 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
   }
 
   .hamburger {
@@ -60,6 +87,12 @@ import Logo from "../../public/icons/logopng.astro";
       flex-direction: column;
       margin-top: 2px;
     }
+  }
+
+  a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 9999px;
   }
 
   @media screen and (max-width: 768px) {
@@ -137,9 +170,27 @@ import Logo from "../../public/icons/logopng.astro";
 <script>
   const menubar = document.querySelector(".hamburger");
   const navmenu = document.querySelector(".navmenu");
+  const links = document.querySelectorAll(".navmenu ul li a");
 
   menubar?.addEventListener("click", () => {
     navmenu?.classList.toggle("showmenu");
     menubar?.classList.toggle("togglemenu");
+  });
+
+  const linkArray = Array.from(links) as HTMLAnchorElement[];
+
+  linkArray.forEach((link) => {
+    //remove active class for all links
+    link.classList.remove("active");
+
+    //get the current path
+    const currentPath = window.location.pathname;
+
+    //get the href from the link array then use url object tot get the pathname and the remove the trailing slash
+    const hrefArray = new URL(link.href).pathname;
+
+    if (currentPath === hrefArray) {
+      link.classList.add("active");
+    }
   });
 </script>

@@ -69,13 +69,16 @@ import Logo from "../../public/icons/logopng.astro";
     /* background: linear-gradient(rgb(206, 179, 83) 0%, rgba(5, 5, 117, 0.1) 100%); */
     background: transparent;
     position: relative;
+    transition: all 0.5s linear;
   }
 
   .buttonstyle:hover {
     padding: 1rem 2rem;
     transition: padding 1s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 1);
+    color: #050575;
     backdrop-filter: blur(30px);
+    transition: all 0.5s linear;
   }
 
   .hamburger {

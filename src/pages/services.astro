@@ -63,7 +63,7 @@ import Nav from "../components/nav.astro";
                 width={500}
                 height={300}
                 alt="sample pics"
-                class="h-[100%] object-cover"
+                class="h-[100%] object-cover rounded-[20px]"
               />
             </div>
           </div>
@@ -106,7 +106,7 @@ import Nav from "../components/nav.astro";
                 width={500}
                 height={300}
                 alt="sample pics"
-                class="h-[100%] object-cover"
+                class="h-[100%] object-cover rounded-[20px]"
               />
             </div>
           </div>
@@ -130,7 +130,7 @@ import Nav from "../components/nav.astro";
             </div>
             <div class="flex flex-col gap-6" id="service">
               <div
-                class="flex flex-col p-8 gap-6 w-full item justify-between items-center bg-white/10 backdrop-blur-[30px]"
+                class="flex flex-col p-8 gap-6 w-full item justify-between items-center bg-white/10 backdrop-blur-[30px] rounded-[20px]"
               >
                 <h3 class="text-[28px]">Training and Development</h3>
                 <p class="md:w-[70%] text-justify">
@@ -148,7 +148,7 @@ import Nav from "../components/nav.astro";
                     <button
                       type="button"
                       class="buttonstyle px-[1.8rem] py-[1rem] font-semibold rounded-full bg-[rgb(237,189,7)]"
-                      >Register for training!</button
+                      >Register for training</button
                     ></a
                   >
                 </div>
@@ -157,7 +157,7 @@ import Nav from "../components/nav.astro";
                 class="grid md:grid-cols-[repeat(auto-fit,minmax(40ch,1fr))] grid-cols-[repeat(auto-fit,minmax(30ch,1fr))] gap-6"
               >
                 <div
-                  class="grid grid-col-subgrid p-8 gap-6 w-full justify-between bg-white/10 backdrop-blur-[30px]"
+                  class="grid grid-col-subgrid p-8 gap-6 w-full justify-between bg-white/10 backdrop-blur-[30px] rounded-[20px]"
                 >
                   <h3 class="text-[28px]">Operations</h3>
                   <p class="text-justify">
@@ -170,7 +170,7 @@ import Nav from "../components/nav.astro";
                   </p>
                 </div>
                 <div
-                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px]"
+                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px] rounded-[20px]"
                 >
                   <h3 class="text-[28px]">Proposal Drafting</h3>
                   <p class="text-justify">
@@ -186,7 +186,7 @@ import Nav from "../components/nav.astro";
               <div>
                 <div
                   id="resource"
-                  class="flex flex-col p-8 gap-6 w-full item justify-between items-center bg-white/10 backdrop-blur-[30px]"
+                  class="flex flex-col p-8 gap-6 w-full item justify-between items-center bg-white/10 backdrop-blur-[30px] rounded-[20px]"
                 >
                   <h3 class="text-[28px]">Human resources and Outsourcing</h3>
                   <p class="text-justify md:w-[70%]">
@@ -205,7 +205,7 @@ import Nav from "../components/nav.astro";
                 class="grid md:grid-cols-[repeat(auto-fit,minmax(40ch,1fr))] grid-cols-[repeat(auto-fit,minmax(30ch,1fr))] gap-6"
               >
                 <div
-                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px]"
+                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px] rounded-[20px]"
                 >
                   <h3 class="text-[28px]">Source procurement and branding</h3>
                   <p class="text-justify">
@@ -218,7 +218,7 @@ import Nav from "../components/nav.astro";
                   </p>
                 </div>
                 <div
-                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px]"
+                  class="grid grid-cols-subgrid p-8 gap-6 w-full bg-white/10 backdrop-blur-[30px] rounded-[20px]"
                 >
                   <h3 class="text-[28px]">Customer Satisfation and Marketing</h3>
                   <p class="text-justify">
@@ -278,7 +278,7 @@ import Nav from "../components/nav.astro";
                 width={500}
                 height={300}
                 alt="sample pics"
-                class="h-[100%] object-cover"
+                class="h-[100%] object-cover rounded-[20px]"
               />
             </div>
           </div>
@@ -319,7 +319,7 @@ import Nav from "../components/nav.astro";
                 width={500}
                 height={300}
                 alt="sample pics"
-                class="h-[100%] object-cover"
+                class="h-[100%] object-cover rounded-[20px]"
               />
             </div>
           </div>
@@ -364,7 +364,7 @@ import Nav from "../components/nav.astro";
                 width={500}
                 height={300}
                 alt="sample pics"
-                class="h-[100%] object-cover"
+                class="h-[100%] object-cover rounded-[20px]"
               />
             </div>
           </div>
@@ -393,13 +393,17 @@ import Nav from "../components/nav.astro";
   }
 
   .buttonstyle {
-    background: linear-gradient(rgb(206, 179, 83) 0%, rgba(5, 5, 117, 0.1) 100%);
+    background: white;
     position: relative;
+    color: rgb(0, 0, 0, 0.5);
   }
 
   .buttonstyle:hover {
     padding: 1rem 2rem;
-    transition: padding 1s ease-in-out;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: all 0.5s ease-in-out;
   }
 
   .doings2 {

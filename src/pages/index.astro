@@ -47,7 +47,7 @@ import Footer from "../components/footer.astro";
               ></a
             >
           </div>
-          <div class="picbg md:w-1/2 w-full h-full"></div>
+          <div class="picbg md:w-1/2 w-full"></div>
         </section>
       </div>
     </section>
@@ -55,7 +55,7 @@ import Footer from "../components/footer.astro";
     <!-- Who we are -->
     <section class="whowebg py-[100px]">
       <div class="container mx-auto md:mt-0">
-        <div class="mx-6 md:mx-9">
+        <div class="mx-6 md:mx-0">
           <div class="flex flex-col gap-10 text-white">
             <div class="flex">
               <p
@@ -118,14 +118,14 @@ import Footer from "../components/footer.astro";
 
           <div class="flex md:flex-row flex-col gap-6 text-white">
             <div class="serv1 md:w-1/2 w-full flex flex-col justify-between p-6 gap-10 md:gap-0">
-              <div class="flex">
+              <div class="flex z-10">
                 <p
                   class="flex font-Kumbh border border-white/30 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
                 >
                   Training and Development
                 </p>
               </div>
-              <div class="flex justify-between items-end">
+              <div class="flex justify-between items-end relative z-20">
                 <h3 class="text-[24px] w-[80%]">
                   Tailor-made training workshops for both individuals and organizations
                 </h3>
@@ -140,14 +140,14 @@ import Footer from "../components/footer.astro";
 
             <div class="md:w-1/2 space-y-6">
               <div class="serv2 md:w-1/2 flex flex-col justify-between p-6 gap-10 md:gap-0">
-                <div class="flex">
+                <div class="flex z-10">
                   <p
                     class="flex font-Kumbh border border-white/30 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
                   >
                     NGO Consulting
                   </p>
                 </div>
-                <div class="flex justify-between items-end">
+                <div class="flex justify-between items-end z-10">
                   <h3 class="text-[24px] w-[80%]">
                     Program Development, Implementation and Evaluation
                   </h3>
@@ -163,12 +163,12 @@ import Footer from "../components/footer.astro";
               <div class="serv3 w-1/2 flex flex-col justify-between p-6 gap-10 md:gap-0">
                 <div class="flex">
                   <p
-                    class="flex font-Kumbh border border-white/30 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
+                    class="z-10 flex font-Kumbh border border-white/30 py-1 px-4 text-sm rounded-full backdrop-blur-[30px] text-white/60"
                   >
                     Human Resource Outsourcing
                   </p>
                 </div>
-                <div class="flex justify-between items-end">
+                <div class="flex justify-between items-end z-10">
                   <h3 class="text-[24px] w-[80%]">
                     Outsourcing part of your HR duties can significantly reduce company costs
                   </h3>
@@ -227,25 +227,40 @@ import Footer from "../components/footer.astro";
             </div>
             <h2 class="text-[2.3rem] mb-10">Trusted by</h2>
           </div>
-          <div class="flex scroll">
-            <ul class="flex flex-row items-center gap-10 scroll-inner">
-              <li>
-                <Image
-                  src={alphajoe}
-                  width={150}
-                  height={100}
-                  alt="alphajoe logo"
-                  class="w-full h-full"
-                />
-              </li>
-              <li><Image src={kingee} width={80} height={100} alt="kingee logo" /></li>
-              <li><Image src={Alliance} width={100} height={100} alt="Alliance logo" /></li>
-              <li><Image src={dna} width={90} height={100} alt="dna logo" /></li>
-              <li><Image src={fresh} width={100} height={100} alt="fresh logo" /></li>
-              <li><Image src={nkv} width={150} height={100} alt="nkv logo" /></li>
-              <li><Image src={repro} width={80} height={100} alt="repro logo" /></li>
-              <li><Image src={Anchu} width={150} height={100} alt="Anchu logo" /></li>
-            </ul>
+          <div class="flex overflow-auto gap-10">
+            <Image
+              src={alphajoe}
+              width={150}
+              height={100}
+              alt="alphajoe logo"
+              class="w-full h-[5rem] rounded"
+            />
+
+            <Image
+              src={kingee}
+              width={100}
+              height={100}
+              alt="kingee logo"
+              class:list="h-[5rem] rounded"
+            />
+
+            <Image
+              src={Alliance}
+              width={100}
+              height={100}
+              alt="Alliance logo"
+              class="h-[5rem] rounded"
+            />
+
+            <Image src={dna} width={100} height={100} alt="dna logo" class="h-[5rem] rounded" />
+
+            <Image src={fresh} width={100} height={100} alt="fresh logo" class="h-[5rem] rounded" />
+
+            <Image src={nkv} width={150} height={100} alt="nkv logo" class="h-[5rem] rounded" />
+
+            <Image src={repro} width={100} height={100} alt="repro logo" class="h-[5rem] rounded" />
+
+            <Image src={Anchu} width={150} height={100} alt="Anchu logo" class="h-[5rem] rounded" />
           </div>
         </div>
       </div>
@@ -265,9 +280,9 @@ import Footer from "../components/footer.astro";
             </div>
             <h2 class="text-[2.3rem] mb-10">What our clients say about us</h2>
           </div>
-          <div class="grid grid-cols-[repeat(auto-fit,minmax(30ch,1fr))] gap-6">
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(30ch,1fr))] gap-6 relative quote">
             <div
-              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between"
+              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between rounded-[20px]"
             >
               <p>
                 Paracletworld Service Limited is a true partner in our growth journey. Their
@@ -278,7 +293,7 @@ import Footer from "../components/footer.astro";
             </div>
 
             <div
-              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between"
+              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between rounded-[20px]"
             >
               <p>
                 From financial management to strategic planning, Paracletworld Service Limited
@@ -289,7 +304,7 @@ import Footer from "../components/footer.astro";
             </div>
 
             <div
-              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between"
+              class="bg-white/10 p-6 backdrop-blur-[30px] text-white/80 flex flex-col justify-between rounded-[20px] z-20"
             >
               <p>
                 Choosing Paracletworld Service Limited was one of the best decisions we made for our
@@ -324,18 +339,26 @@ import Footer from "../components/footer.astro";
     .picbg {
       background: url("/img/training2.webp") right/cover no-repeat;
       height: 60vh;
-      overflow: hidden;
       border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
+      border-radius: 20px;
+      border: 0.5px solid rgba(5, 76, 117, 0.1);
+      padding: 1rem;
     }
 
     .buttonstyle {
-      background: linear-gradient(rgb(206, 179, 83) 0%, rgba(5, 5, 117, 0.1) 100%);
+      background: linear-gradient(white, white);
+      color: rgba(5, 5, 117, 1);
       position: relative;
+      transition: all 0.5s linear;
     }
 
     .buttonstyle:hover {
       padding: 1rem 2rem;
       transition: padding 1s ease-in-out;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      transition: all 0.5s linear;
     }
 
     .whowebg {
@@ -364,6 +387,9 @@ import Footer from "../components/footer.astro";
       height: 50vh;
       width: 100%;
       border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
+      border-radius: 20px;
+      border: 0.5px solid rgba(5, 76, 117, 0.1);
+      padding: 1rem;
     }
 
     .imgbg2 {
@@ -371,27 +397,73 @@ import Footer from "../components/footer.astro";
       height: 50vh;
       width: 100%;
       border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)) 50% / 50%;
+      border-radius: 20px;
+      border: 0.5px solid rgba(5, 76, 117, 0.1);
+      padding: 1rem;
     }
 
     .serv1 {
-      background: url("/img/IMG_7119.JPG") center/cover no-repeat;
+      background: url("/img/IMG_7119.JPG") no-repeat;
+      background-size: cover;
+      background-position: center;
       height: 73vh;
       width: 50%;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) 50% / 50%;
+      border-radius: 20px;
+      position: relative;
+
+      /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) 50% / 50%;
+     */
+    }
+
+    .serv1::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 0%, rgba(0, 0, 0, 8) 100%);
+      border-radius: 20px;
     }
 
     .serv2 {
       background: url("/img/IMG_3878.PNG") left/cover no-repeat;
       height: 35vh;
       width: 100%;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 8)) 50% / 50%;
+      /* border-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 8)) 50% / 50%; */
+      position: relative;
+      border-radius: 20px;
+    }
+
+    .serv2::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+      border-radius: 20px;
     }
 
     .serv3 {
       background: url("/img/mogaju aye lo.png") left/cover no-repeat;
       height: 35vh;
       width: 100%;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 8)) 50% / 50%;
+      /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 8)) 50% / 50%; */
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .serv3::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+      border-radius: 20px;
     }
 
     .servbg {
@@ -477,24 +549,34 @@ import Footer from "../components/footer.astro";
       transition: transform 1s linear;
     }
 
-    /* .scroll-inner {
-      animation: scroller 20s linear infinite;
+    .quote {
+      position: relative;
+      top: 0;
     }
 
-    .scroll {
-      max-width: max-content;
+    .quote::before {
+      content: "❝";
+      position: absolute;
+      top: -7.5rem;
+      left: 0;
+      font-weight: bold;
+      color: white;
+      opacity: 0.2;
+      font-size: 10rem;
+      z-index:;
+    }
 
-      border: 2px solid white;
-      mask: linear-gradient(90deg, transparent, white 20% 80%);
-
-      -webkit-mask: linear-gradient(90deg, transparent, white 20% 80%, transparent);
-    } */
-
-    /* @keyframes scroller {
-      to {
-        transform: translate(calc(-50% - 2.5rem));
-      }
-    } */
+    .quote::after {
+      content: "❞";
+      position: absolute;
+      right: 0rem;
+      bottom: -9rem;
+      font-weight: bold;
+      color: white;
+      opacity: 0.2;
+      font-size: 10rem;
+      z-index:;
+    }
 
     @media screen and (max-width: 768px) {
       .serv1,

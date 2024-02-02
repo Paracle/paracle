@@ -187,10 +187,10 @@ import Logo from "../../public/icons/logopng.astro";
     link.classList.remove("active");
 
     //get the current path
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.pathname.slice(0, -1);
 
     //get the href from the link array then use url object tot get the pathname and the remove the trailing slash
-    const hrefPath = new URL(link.href).pathname.slice(0, -1);
+    const hrefPath = new URL(link.href).pathname;
 
     console.log("hrefpath", hrefPath);
     console.log("current", currentPath);

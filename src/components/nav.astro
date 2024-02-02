@@ -187,9 +187,10 @@ import Logo from "../../public/icons/logopng.astro";
     const currentPath = window.location.pathname;
 
     //get the href from the link array then use url object tot get the pathname and the remove the trailing slash
-    const hrefArray = new URL(link.href).pathname;
+    const hrefPath = new URL(link.href).pathname;
 
-    if (currentPath === hrefArray) {
+    //check if current path is the path the user is and add an active link
+    if (currentPath === hrefPath) {
       link.classList.add("active");
     }
   });

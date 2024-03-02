@@ -11,6 +11,7 @@ import Alliance from "../../public/img/alliance log.jpeg";
 import { Image } from "astro:assets";
 import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
+import gsap from "gsap";
 ---
 
 <Layout title="homepage">
@@ -318,279 +319,274 @@ import Footer from "../components/footer.astro";
     </section>
     <Footer />
   </main>
-
-  <style>
-    .mainbg {
-      width: 100vw;
-      background:
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.2) 10% 20.1%
-          )
-          0 0 / 30% 50% no-repeat,
-        repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
-          0 0 / 30% 50% no-repeat,
-        linear-gradient(rgba(5, 5, 117, 1) 0%, rgba(5, 76, 117, 1) 80%);
-      z-index: -99999;
-    }
-
-    .picbg {
-      background: url("/img/training2.webp") right/cover no-repeat;
-      height: 60vh;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
-      border-radius: 20px;
-      border: 0.5px solid rgba(5, 76, 117, 0.1);
-      padding: 1rem;
-    }
-
-    .buttonstyle {
-      background: linear-gradient(white, white);
-      color: rgba(5, 5, 117, 1);
-      position: relative;
-      transition: all 0.5s linear;
-    }
-
-    .buttonstyle:hover {
-      padding: 1rem 2rem;
-      transition: padding 1s ease-in-out;
-      border: 2px solid white;
-      background: transparent;
-      color: white;
-      transition: all 0.5s linear;
-    }
-
-    .whowebg {
-      width: 100vw;
-      height: auto;
-      background:
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          100% 0 / 40% 50% no-repeat,
-        repeating-linear-gradient(
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          100% 0 / 40% 50% no-repeat,
-        linear-gradient(rgba(5, 76, 117, 1) 0%, rgb(194, 176, 109) 80%);
-      z-index: -999999;
-    }
-
-    .imgbg {
-      background: url("/img/consultancy.jpeg") top/cover no-repeat;
-      height: 50vh;
-      width: 100%;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
-      border-radius: 20px;
-      border: 0.5px solid rgba(5, 76, 117, 0.1);
-      padding: 1rem;
-    }
-
-    .imgbg2 {
-      background: url("/img/consulting.webp") center/cover no-repeat;
-      height: 50vh;
-      width: 100%;
-      border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)) 50% / 50%;
-      border-radius: 20px;
-      border: 0.5px solid rgba(5, 76, 117, 0.1);
-      padding: 1rem;
-    }
-
-    .serv1 {
-      background: url("/img/IMG_7119.JPG") no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 73vh;
-      width: 50%;
-      border-radius: 20px;
-      position: relative;
-
-      /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) 50% / 50%;
-     */
-    }
-
-    .serv1::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(transparent 0%, rgba(0, 0, 0, 8) 100%);
-      border-radius: 20px;
-    }
-
-    .serv2 {
-      background: url("/img/IMG_3878.PNG") left/cover no-repeat;
-      height: 35vh;
-      width: 100%;
-      /* border-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 8)) 50% / 50%; */
-      position: relative;
-      border-radius: 20px;
-    }
-
-    .serv2::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
-      border-radius: 20px;
-    }
-
-    .serv3 {
-      background: url("/img/mogaju aye lo.png") left/cover no-repeat;
-      height: 35vh;
-      width: 100%;
-      /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 8)) 50% / 50%; */
-      border-radius: 20px;
-      position: relative;
-    }
-
-    .serv3::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
-      border-radius: 20px;
-    }
-
-    .servbg {
-      width: 100vw;
-      height: auto;
-      background:
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.2) 10% 20.1%
-          )
-          0 0 / 40% 50% no-repeat,
-        repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%)
-          0 0 / 40% 50% no-repeat,
-        linear-gradient(rgb(194, 176, 109) 0%, rgba(5, 76, 117, 1) 80%);
-      z-index: -999999;
-    }
-
-    .getbg {
-      width: 100vw;
-      height: auto;
-      background:
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          0 0 / 30% 50% no-repeat,
-        repeating-linear-gradient(
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          0 0 / 30% 50% no-repeat,
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          100% 100% / 30% 50% no-repeat,
-        repeating-linear-gradient(
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          100% 100% / 30% 50% no-repeat,
-        linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 76, 117, 1) 100%);
-      z-index: -999999;
-    }
-
-    .clientbg {
-      height: auto;
-      background: linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 5, 117, 1) 100%);
-      z-index: -999999;
-    }
-
-    .testibg {
-      width: 100vw;
-      height: auto;
-      background:
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          0 0 / 30% 50% no-repeat,
-        repeating-linear-gradient(
-            transparent,
-            transparent 0 20%,
-            rgb(255, 255, 255, 0.15) 10% 20.1%
-          )
-          0 0 / 30% 50% no-repeat,
-        linear-gradient(rgba(5, 5, 117, 1) 0%, rgba(5, 5, 117, 1) 100%);
-      z-index: -999999;
-    }
-
-    .spanhov:hover {
-      transform: scale(1.2);
-      transition: transform 1s linear;
-    }
-
-    .quote {
-      position: relative;
-      top: 0;
-    }
-
-    .quote::before {
-      content: "❝";
-      position: absolute;
-      top: -7.5rem;
-      left: 0;
-      font-weight: bold;
-      color: white;
-      opacity: 0.2;
-      font-size: 10rem;
-      z-index:;
-    }
-
-    .quote::after {
-      content: "❞";
-      position: absolute;
-      right: 0rem;
-      bottom: -9rem;
-      font-weight: bold;
-      color: white;
-      opacity: 0.2;
-      font-size: 10rem;
-      z-index:;
-    }
-
-    @media screen and (max-width: 768px) {
-      .serv1,
-      .serv2,
-      .serv3 {
-        height: 100%;
-        width: 100%;
-      }
-
-      .picbg,
-      .imgbg,
-      .imgbg2 {
-        height: 30vh;
-      }
-    }
-  </style>
 </Layout>
+
+<style>
+  .mainbg {
+    width: 100vw;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        0 0 / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%) 0
+        0 / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 5, 117, 1) 0%, rgba(5, 76, 117, 1) 80%);
+    z-index: -99999;
+  }
+
+  .picbg {
+    background: url("/img/training2.webp") right/cover no-repeat;
+    height: 60vh;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
+    border-radius: 20px;
+    border: 0.5px solid rgba(5, 76, 117, 0.1);
+    padding: 1rem;
+  }
+
+  .buttonstyle {
+    background: linear-gradient(white, white);
+    color: rgba(5, 5, 117, 1);
+    position: relative;
+    transition: all 0.5s linear;
+  }
+
+  .buttonstyle:hover {
+    padding: 1rem 2rem;
+    transition: padding 1s ease-in-out;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    transition: all 0.5s linear;
+  }
+
+  .whowebg {
+    width: 100vw;
+    height: auto;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.15) 10% 20.1%
+        )
+        100% 0 / 40% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.15) 10% 20.1%)
+        100% 0 / 40% 50% no-repeat,
+      linear-gradient(rgba(5, 76, 117, 1) 0%, rgb(194, 176, 109) 80%);
+    z-index: -999999;
+  }
+
+  .imgbg {
+    background: url("/img/consultancy.jpeg") top/cover no-repeat;
+    height: 50vh;
+    width: 100%;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)) 50% / 50%;
+    border-radius: 20px;
+    border: 0.5px solid rgba(5, 76, 117, 0.1);
+    padding: 1rem;
+  }
+
+  .imgbg2 {
+    background: url("/img/consulting.webp") center/cover no-repeat;
+    height: 50vh;
+    width: 100%;
+    border-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)) 50% / 50%;
+    border-radius: 20px;
+    border: 0.5px solid rgba(5, 76, 117, 0.1);
+    padding: 1rem;
+  }
+
+  .serv1 {
+    background: url("/img/IMG_7119.JPG") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 73vh;
+    width: 50%;
+    border-radius: 20px;
+    position: relative;
+
+    /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) 50% / 50%;
+   */
+  }
+
+  .serv1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 0%, rgba(0, 0, 0, 8) 100%);
+    border-radius: 20px;
+  }
+
+  .serv2 {
+    background: url("/img/IMG_3878.PNG") left/cover no-repeat;
+    height: 35vh;
+    width: 100%;
+    /* border-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 8)) 50% / 50%; */
+    position: relative;
+    border-radius: 20px;
+  }
+
+  .serv2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border-radius: 20px;
+  }
+
+  .serv3 {
+    background: url("/img/mogaju aye lo.png") left/cover no-repeat;
+    height: 35vh;
+    width: 100%;
+    /* border-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 8)) 50% / 50%; */
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .serv3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border-radius: 20px;
+  }
+
+  .servbg {
+    width: 100vw;
+    height: auto;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.2) 10% 20.1%
+        )
+        0 0 / 40% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.2) 10% 20.1%) 0
+        0 / 40% 50% no-repeat,
+      linear-gradient(rgb(194, 176, 109) 0%, rgba(5, 76, 117, 1) 80%);
+    z-index: -999999;
+  }
+
+  .getbg {
+    width: 100vw;
+    height: auto;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.15) 10% 20.1%
+        )
+        0 0 / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.15) 10% 20.1%)
+        0 0 / 30% 50% no-repeat,
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.15) 10% 20.1%
+        )
+        100% 100% / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.15) 10% 20.1%)
+        100% 100% / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 76, 117, 1) 100%);
+    z-index: -999999;
+  }
+
+  .clientbg {
+    height: auto;
+    background: linear-gradient(rgba(5, 76, 117, 1) 0%, rgba(5, 5, 117, 1) 100%);
+    z-index: -999999;
+  }
+
+  .testibg {
+    width: 100vw;
+    height: auto;
+    background:
+      repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 0 20%,
+          rgb(255, 255, 255, 0.15) 10% 20.1%
+        )
+        0 0 / 30% 50% no-repeat,
+      repeating-linear-gradient(transparent, transparent 0 20%, rgb(255, 255, 255, 0.15) 10% 20.1%)
+        0 0 / 30% 50% no-repeat,
+      linear-gradient(rgba(5, 5, 117, 1) 0%, rgba(5, 5, 117, 1) 100%);
+    z-index: -999999;
+  }
+
+  .spanhov:hover {
+    transform: scale(1.2);
+    transition: transform 1s linear;
+  }
+
+  .quote {
+    position: relative;
+    top: 0;
+  }
+
+  .quote::before {
+    content: "❝";
+    position: absolute;
+    top: -7.5rem;
+    left: 0;
+    font-weight: bold;
+    color: white;
+    opacity: 0.2;
+    font-size: 10rem;
+    z-index:;
+  }
+
+  .quote::after {
+    content: "❞";
+    position: absolute;
+    right: 0rem;
+    bottom: -9rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0.2;
+    font-size: 10rem;
+    z-index:;
+  }
+
+  @media screen and (max-width: 768px) {
+    .serv1,
+    .serv2,
+    .serv3 {
+      height: 100%;
+      width: 100%;
+    }
+
+    .picbg,
+    .imgbg,
+    .imgbg2 {
+      height: 30vh;
+    }
+  }
+</style>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  const sec = document.querySelectorAll("section");
+  sec.forEach((section) => {
+    const tl = gsap.timeline();
+    tl.from(section, {
+      stagger: 1,
+    });
+  });
+</script>
